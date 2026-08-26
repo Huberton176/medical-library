@@ -1,0 +1,18 @@
+[
+  {
+    "id": "esc-2024-hypertension",
+    "title": "Hướng dẫn ESC 2024 về Quản lý tiền tăng huyết áp và Tăng huyết áp",
+    "shortTitle": "ESC 2024 – Tăng huyết áp",
+    "description": "Hướng dẫn của Hiệp hội Tim mạch Châu Âu về đánh giá, chẩn đoán và quản lý tăng huyết áp.",
+    "type": "guideline",
+    "specialty": ["Tim mạch", "Nội khoa"],
+    "topics": ["Tăng huyết áp"],
+    "tags": ["ESC", "2024", "Tăng huyết áp", "Phác đồ"],
+    "source": "ESC",
+    "year": 2024,
+    "language": "vi",
+    "sourceType": "html",
+    "url": "documents/esc-2024-hypertension.html",
+    "updatedAt": "2026-08-26"
+  }
+]
