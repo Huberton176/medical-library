@@ -27,5 +27,37 @@
     "sourceType": "html",
     "url": "documents/esc-2024-hypertension.html",
     "updatedAt": "2026-08-26"
-  }
+  },
+
+  {
+  "id": "bmj-2026-hyperkalaemia",
+  "title": "Diagnosis and management of acute hyperkalaemia",
+  "shortTitle": "BMJ 2026 – Tăng kali máu cấp",
+  "description": "Bài tổng quan State of the Art Review về dịch tễ, sinh lý bệnh, yếu tố nguy cơ, chẩn đoán và các tiếp cận điều trị tăng kali máu cấp và mạn tính dựa trên bằng chứng.",
+  "type": "review",
+  "specialty": [
+    "Hồi sức cấp cứu",
+    "Thận học",
+    "Tim mạch",
+    "Nội khoa"
+  ],
+  "topics": [
+    "Rối loạn điện giải",
+    "Tăng kali máu"
+  ],
+  "tags": [
+    "BMJ",
+    "2026",
+    "Hyperkalaemia",
+    "Tăng kali máu",
+    "State of the Art Review",
+    "Cấp cứu"
+  ],
+  "source": "BMJ",
+  "year": 2026,
+  "language": "en",
+  "sourceType": "pdf",
+  "url": "documents/bmj-2026-hyperkalaemia.pdf",
+  "updatedAt": "2026-08-27"
+}
 ]
