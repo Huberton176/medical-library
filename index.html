@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medical Library — Thư viện tra cứu tài liệu y khoa lâm sàng.">
+  <title>Medical Library — Thư viện Tra cứu Y khoa</title>
+  <link rel="stylesheet" href="assets/css/library.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav container-wide">
+      <a class="brand" href="./" aria-label="Medical Library - Trang chủ">
+        <span class="brand-mark">M</span>
+        <span>
+          <strong>MEDICAL LIBRARY</strong>
+          <small>Clinical Medical Knowledge</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#library">Thư viện</a>
+        <a href="#specialties">Chuyên khoa</a>
+        <a href="#recent">Cập nhật</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">ACADEMIC · MODERN CLINICAL</p>
+        <h1>Thư viện Tra cứu Y khoa</h1>
+        <p class="hero-subtitle">Tập hợp tài liệu lâm sàng, hướng dẫn, giáo trình và tài liệu tham khảo dành cho sinh viên Y, bác sĩ và nhân viên y tế.</p>
+
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search"
+                 autocomplete="off"
+                 placeholder="Tìm tài liệu, bệnh lý, chuyên khoa..."
+                 aria-label="Tìm kiếm tài liệu">
+          <kbd>Ctrl K</kbd>
+        </div>
+        <div class="search-hints">
+          <button data-search="tang huyet ap">Tăng huyết áp</button>
+          <button data-search="tim mach">Tim mạch</button>
+          <button data-search="esc">ESC</button>
+          <button data-search="duoc ly">Dược lý</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container stats" aria-label="Thống kê thư viện">
+      <div><strong id="totalCount">0</strong><span>tài liệu</span></div>
+      <div><strong id="htmlCount">0</strong><span>HTML</span></div>
+      <div><strong id="driveCount">0</strong><span>Google Drive</span></div>
+    </section>
+
+    <section id="library" class="container library-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LIBRARY</p>
+          <h2>Kho tài liệu</h2>
+        </div>
+        <button id="clearFilters" class="text-button" type="button">Xóa bộ lọc</button>
+      </div>
+
+      <div class="library-layout">
+        <aside class="filters" aria-label="Bộ lọc">
+          <div class="filter-group">
+            <label for="typeFilter">Loại tài liệu</label>
+            <select id="typeFilter">
+              <option value="all">Tất cả</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="specialtyFilter">Chuyên khoa</label>
+            <select id="specialtyFilter">
+              <option value="all">Tất cả</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="yearFilter">Năm</label>
+            <select id="yearFilter">
+              <option value="all">Tất cả</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="sourceFilter">Nguồn</label>
+            <select id="sourceFilter">
+              <option value="all">Tất cả</option>
+            </select>
+          </div>
+        </aside>
+
+        <div class="results-area">
+          <div class="results-toolbar">
+            <span id="resultSummary">Đang tải tài liệu...</span>
+            <select id="sortSelect" aria-label="Sắp xếp">
+              <option value="updated">Mới cập nhật</option>
+              <option value="title">Tên A → Z</option>
+              <option value="year">Năm mới → cũ</option>
+            </select>
+          </div>
+          <div id="documentGrid" class="document-grid"></div>
+          <div id="noResults" class="empty-state" hidden>
+            <div class="empty-icon">⌕</div>
+            <h3>Không tìm thấy tài liệu</h3>
+            <p>Thử từ khóa khác hoặc xóa bớt bộ lọc.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specialties" class="container specialty-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BROWSE BY SPECIALTY</p>
+          <h2>Khám phá theo chuyên khoa</h2>
+        </div>
+      </div>
+      <div id="specialtyGrid" class="specialty-grid"></div>
+    </section>
+
+    <section id="recent" class="container recent-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RECENTLY UPDATED</p>
+          <h2>Cập nhật gần đây</h2>
+        </div>
+      </div>
+      <div id="recentGrid" class="document-grid compact"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <strong>MEDICAL LIBRARY</strong>
+      <span>Academic Medical Reference · Phase 1</span>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

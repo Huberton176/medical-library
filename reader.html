@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medical Library — Clinical Document Reader">
+  <title>Medical Library — Reader</title>
+  <link rel="stylesheet" href="assets/css/reader.css">
+</head>
+<body class="reader-page">
+  <header class="reader-header">
+    <div class="reader-left">
+      <button id="backButton" class="icon-button back-button" type="button" aria-label="Quay lại thư viện">
+        <span aria-hidden="true">←</span><span class="back-label">Thư viện</span>
+      </button>
+      <a class="brand" href="./" aria-label="Medical Library">
+        <span class="brand-mark">M</span>
+        <span class="brand-copy">
+          <strong>MEDICAL LIBRARY</strong>
+          <small>Clinical Medical Knowledge</small>
+        </span>
+      </a>
+    </div>
+
+    <div class="document-head">
+      <strong id="readerTitle">Đang tải tài liệu…</strong>
+      <span id="readerMeta"></span>
+    </div>
+
+    <div class="reader-actions" aria-label="Công cụ đọc">
+      <button class="tool-button" data-action="font-down" type="button" aria-label="Giảm cỡ chữ">A−</button>
+      <button class="tool-button" data-action="font-up" type="button" aria-label="Tăng cỡ chữ">A+</button>
+      <button class="tool-button" data-action="print" type="button" aria-label="In tài liệu">⎙</button>
+      <button class="tool-button" data-action="theme" type="button" aria-label="Đổi giao diện">☾</button>
+    </div>
+  </header>
+
+  <div class="progress-track" aria-hidden="true"><div id="progressBar"></div></div>
+
+  <div class="reader-layout">
+    <aside class="toc-panel" aria-label="Mục lục tài liệu">
+      <div class="toc-head">
+        <span>NỘI DUNG</span>
+        <span id="progressText">0%</span>
+      </div>
+      <nav><ul id="tocList"></ul></nav>
+    </aside>
+
+    <main class="reader-main">
+      <section class="reader-hero" aria-labelledby="heroTitle">
+        <p id="readerKicker" class="kicker">HTML · GUIDELINE</p>
+        <h1 id="heroTitle">Đang tải tài liệu…</h1>
+        <p id="heroDescription"></p>
+        <div id="heroMeta" class="hero-meta"></div>
+      </section>
+
+      <div class="mobile-toc-wrap">
+        <label for="mobileToc">Mục lục</label>
+        <select id="mobileToc"><option value="">Chọn mục…</option></select>
+      </div>
+
+      <div class="document-frame-wrap">
+        <iframe id="documentFrame" title="Nội dung tài liệu y khoa" loading="eager"></iframe>
+      </div>
+
+      <footer class="reader-footer">
+        <button id="backToLibrary" type="button">← Quay lại thư viện</button>
+        <span>Medical Library · Universal Reader</span>
+      </footer>
+    </main>
+  </div>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Về đầu trang">↑</button>
+
+  <div id="errorState" class="error-state" hidden>
+    <div>
+      <h1>Không thể mở tài liệu</h1>
+      <p id="errorMessage">Không tìm thấy tài liệu tương ứng.</p>
+      <a href="./">← Về Medical Library</a>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/reader.js"></script>
+</body>
+</html>
