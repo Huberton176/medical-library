@@ -1,0 +1,875 @@
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chẩn đoán và Quản lý Tăng kali máu Cấp tính (Diagnosis and management of acute hyperkalaemia)</title>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+  
+  /* CÀI ĐẶT CHUNG */
+  *, *::before, *::after { box-sizing: border-box; }
+  body { 
+      font-family: "Noto Sans", Roboto, Arial, sans-serif; 
+      font-size: 15px; 
+      line-height: 1.6; 
+      color: #222; 
+      max-width: 900px; 
+      margin: 0 auto; 
+      padding: 20px; 
+      overflow-wrap: break-word; 
+      text-align: justify; 
+  }
+  
+  /* HÌNH ẢNH & VIDEO */
+  img, svg, video { max-width: 100%; height: auto; object-fit: contain; display: block; margin: 1.5rem auto; }
+  .figure-placeholder { border: 2px dashed #999; background-color: #f0f0f0; padding: 25px; text-align: center; font-weight: bold; color: #555; margin: 20px 0; border-radius: 5px; font-size: 0.95em; }
+  .image-caption { font-size: 0.85em; color: #4a4a4a; text-align: justify; line-height: 1.5; margin-top: 8px; }
+  
+  /* BẢNG BIỂU (TABLES) */
+  .table-wrapper { width: 100%; overflow-x: auto; margin-bottom: 1.5rem; -webkit-overflow-scrolling: touch; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+  th, td { border: 1px solid #ddd; padding: 9px 10px; text-align: justify; vertical-align: top; }
+  th { background-color: #f8f9fa; font-weight: bold; }
+  .table-section-header { background-color: #d9e1e8 !important; font-weight: bold; }
+  .rec-table th { background-color: #004b87; color: white; text-align: center; }
+  
+  /* BỐ CỤC (LAYOUTS) & TIỆN ÍCH */
+  .ws-nowrap { white-space: nowrap; }
+  .grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; align-items: start; }
+  .grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: start; }
+  @media (max-width: 768px) { .grid-3col { grid-template-columns: 1fr; } }
+  .flex-columns { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.25rem; }
+  .flex-column-item { flex: 1; min-width: 280px; } 
+  
+  /* TYPOGRAPHY (TIÊU ĐỀ & VĂN BẢN) - CÂN CHỈNH THEO BASE 15px */
+  h1 { font-size: 1.75em; line-height: 1.3; border-bottom: none; padding-bottom: 8px; text-align: center; color: #b30000; margin-top: 1.8rem; margin-bottom: 1rem; }
+  h2 { font-size: 1.45em; line-height: 1.35; color: #b30000; margin-top: 1.8em; margin-bottom: 0.6em; }
+  h3 { font-size: 1.25em; line-height: 1.4; color: #004b87; margin-top: 1.5em; margin-bottom: 0.5em; }  
+  h4 { font-size: 1.1em; line-height: 1.45; color: #0056b3; margin-top: 1.2em; margin-bottom: 0.4em; }
+  h5 { font-size: 1.0em; line-height: 1.45; color: #333; margin-top: 1.0em; margin-bottom: 0.3em; font-style: italic; }
+  
+  article > p { text-indent: 2rem; }
+  .info-box p, .step-card p, table p, .figure-container p { text-indent: 0; }
+  .highlight-text { font-weight: bold; color: #b30000; }
+  
+  /* COMPONENT KHUYẾN CÁO Y KHOA */
+  .class-I { background-color: #4CAF50 !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
+  .class-IIa { background-color: #FFC107 !important; color: black; text-align: center; vertical-align: middle; font-weight: bold; }
+  .class-IIb { background-color: #FF9800 !important; color: black; text-align: center; vertical-align: middle; font-weight: bold; }
+  .class-III { background-color: #F44336 !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
+  .level-A { background-color: #00798c !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
+  .level-B { background-color: #459a96 !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
+  .level-C { background-color: #83b6b2 !important; color: black; text-align: center; vertical-align: middle; font-weight: bold; }
+  
+  /* BOX THÔNG TIN & THẺ BƯỚC (CARDS) */
+  .step-card { border: 1px solid #ddd; border-radius: 8px; padding: 14px; margin-bottom: 14px; background: #fdfdfd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .step-card strong { color: #0056b3; font-size: 1.05em; display: block; margin-bottom: 5px; }
+  .step-number { display: inline-block; width: 26px; height: 26px; background: #b30000; color: white; border-radius: 50%; text-align: center; line-height: 26px; font-weight: bold; font-size: 0.9em; margin-right: 8px; }
+  .info-box { background: #f9f9f9; padding: 14px 16px; border-left: 4px solid #004b87; border-radius: 0 4px 4px 0; margin-bottom: 1.4rem; }
+  
+  /* --- KHU VỰC BẢNG CHỮ VIẾT TẮT --- */
+  .abbreviations { font-size: 0.85em; color: #4a4a4a; text-align: justify; padding: 14px 18px; background-color: #f9f9f9; border-left: 4px solid #c0c0c0; margin-bottom: 1.8rem; line-height: 1.5; }
+  
+  .abbr-container { 
+      background-color: #fefefe; 
+      border: 1px solid #e0e0e0; 
+      border-top: 4px solid #008000; 
+      border-radius: 8px; 
+      padding: 18px 22px; 
+      margin-bottom: 1.8rem; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03); 
+      font-size: 12.5px; 
+  }
+  .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 8px 18px;
+      margin: 0;
+  }
+  .abbr-row { 
+      display: flex; 
+      align-items: flex-start;
+      padding-bottom: 5px; 
+      border-bottom: 1px dashed #e0e0e0; 
+  }
+  .abbr-row dt { 
+      flex: 0 0 85px; 
+      font-weight: 800; 
+      color: #008000; 
+      margin: 0; 
+  }
+  .abbr-row dd { 
+      flex: 1; 
+      margin: 0; 
+      color: #222; 
+      font-weight: bold; 
+      line-height: 1.35; 
+  }
+  .vi-trans { 
+      display: block; 
+      font-style: italic; 
+      color: black; 
+      font-weight: normal; 
+      font-size: 0.95em; 
+      margin-top: 2px; 
+  }
+</style>
+</head>
+<body>
+
+<article>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #0ea5e9;">TÓM TẮT</h3>
+            <p>Tăng kali máu (hyperkalaemia) là một rối loạn điện giải phổ biến và có khả năng đe dọa tính mạng do mối liên hệ mật thiết với các rối loạn nhịp tim ác tính và tình trạng ngừng tim đột ngột.</p>
+            <p>Tình trạng này thường xuyên bắt gặp ở cả môi trường chăm sóc cấp tính lẫn mãn tính, đặc biệt ảnh hưởng nặng nề hơn đến nhóm bệnh nhân có bệnh lý nền như bệnh thận mạn tính, suy tim, đái tháo đường, hoặc đang sử dụng các thuốc làm suy giảm khả năng bài tiết kali qua thận.</p>
+            <p>Các nguyên nhân chủ yếu gây tăng kali máu bao gồm suy giảm đào thải kali tại thận (do bệnh thận mạn hoặc ức chế dược lý lên hệ renin-angiotensin-aldosterone) và sự dịch chuyển kali xuyên tế bào (transcellular shifts) do nhiễm toan chuyển hóa, phân hủy mô, thiếu hụt insulin hoặc trạng thái ưu trương.</p>
+            <p>Bất chấp mức độ phổ biến và tầm quan trọng trên lâm sàng, cách tiếp cận chẩn đoán và quản lý tăng kali máu vẫn tồn tại sự khác biệt đáng kể giữa các cơ sở y tế, phản ánh sự không đồng nhất trong định nghĩa, phân tầng nguy cơ và phác đồ can thiệp.</p>
+            <p>Những năm gần đây, chiến lược điều trị đã có nhiều bước tiến nhờ hiểu biết sâu sắc hơn về sinh lý học của kali và sự ra đời của các thuốc gắn kết kali (potassium binding agents) thế hệ mới, đòi hỏi phải có một bản tổng hợp dữ liệu bằng chứng cập nhật.</p>
+            <p>Trong bài tổng quan tài liệu này, chúng tôi tóm tắt các dữ liệu đương đại về dịch tễ học và sinh lý bệnh, xác định các yếu tố nguy cơ then chốt và lưu ý chẩn đoán, đồng thời điểm lại các phương pháp tiếp cận dựa trên bằng chứng trong quản lý cấp tính và mãn tính, đặc biệt lưu ý đến các nhóm quần thể đặc thù và các tình huống lâm sàng có nguy cơ cao.</p>    </div>
+
+    <h2>1. Giới thiệu</h2>
+    <p>Tăng kali máu là một rối loạn điện giải thường gặp và mang mầm mống đe dọa tính mạng, bởi nó gắn liền với nguy cơ rối loạn nhịp tim và ngừng tim đột ngột.<sup>1</sup> Tình trạng này được định nghĩa là sự gia tăng nồng độ kali huyết thanh cao bất thường, thông thường \(\ge 5,5\) mmol/L (hoặc \(\ge 5,0\) mmol/L) ở người trưởng thành. Tuy nhiên, các độc tính có thể xuất hiện ở những ngưỡng thấp hơn, do nguy cơ này gia tăng theo một chuỗi liên tục thay vì chỉ bùng phát ở một ngưỡng cố định, phụ thuộc vào tốc độ tăng kali và các yếu tố đặc thù của từng bệnh nhân.<sup>2-4</sup> Những nguyên nhân thường gặp nhất dẫn đến tăng kali máu bao gồm sự suy giảm khả năng bài tiết kali qua thận (ví dụ: bệnh thận mạn tính (CKD), sử dụng thuốc ức chế hệ renin-angiotensin-aldosterone (RAAS)), sự dịch chuyển xuyên tế bào (ví dụ: do nhiễm toan, phân hủy mô, hoặc thiếu hụt insulin), và ít phổ biến hơn là do tăng lượng kali nạp vào cơ thể.<sup>5</sup> Bất chấp mức độ phổ biến và tầm quan trọng về mặt lâm sàng, các tiêu chuẩn chẩn đoán và phác đồ quản lý tăng kali máu vẫn rất đa dạng tùy thuộc vào từng cơ sở thực hành, đồng thời các chiến lược điều trị không ngừng tiến hóa nhờ sự xuất hiện của nhiều lựa chọn thuốc điều trị mới.<sup>1 4</sup></p>
+    
+    <p>Trong bài tổng quan này, chúng tôi tiến hành tổng hợp các bằng chứng hiện tại về bệnh lý tăng kali máu, tập trung xoáy sâu vào dịch tễ học, sinh lý bệnh, các yếu tố nguy cơ, những điểm cần lưu ý khi chẩn đoán, các chiến lược xử trí cấp tính và các nhóm quần thể đặc thù. Bài viết này được biên soạn nhằm phục vụ các bác sĩ lâm sàng làm việc tại các cơ sở chăm sóc ban đầu, khoa cấp cứu và khu nội trú – những người thường xuyên phải tiếp nhận và xử lý bệnh nhân bị tăng kali máu.</p>
+
+    <h2>2. Nguồn dữ liệu và tiêu chí lựa chọn</h2>
+    <p>Chúng tôi đã tiến hành tìm kiếm trên các cơ sở dữ liệu PubMed, Ovid Medline và Cochrane Database of Systematic Reviews để chắt lọc các bài báo xuất bản từ khi hệ thống bắt đầu hoạt động cho đến ngày 1 tháng 12 năm 2025, nhằm xác định các nghiên cứu liên quan đến việc chẩn đoán và quản lý tăng kali máu. Các từ khóa tìm kiếm bao gồm “hyperkalemia” hoặc “hyperkalaemia”, “hyperpotassemia” hoặc “hyperpotassemias”, “high potassium” hoặc “elevated potassium”, và “potassium abnormality”. Chúng tôi đã đánh giá các nghiên cứu hồi cứu và tiến cứu, các thử nghiệm đối chứng ngẫu nhiên, các bài tổng quan hệ thống và phân tích gộp, cũng như các hướng dẫn điều trị. Nếu có sẵn, các bài tổng quan hệ thống và phân tích gộp sẽ được ưu tiên lựa chọn hàng đầu, tiếp theo là các thử nghiệm đối chứng ngẫu nhiên, nghiên cứu tiến cứu và cuối cùng là nghiên cứu hồi cứu. Chúng tôi đã loại trừ các ấn phẩm không qua bình duyệt (bao gồm cả các bản thảo tiền xuất bản - preprint), báo cáo loạt ca bệnh, báo cáo ca bệnh đơn lẻ và các bài xã luận. Trong trường hợp có nhiều bài viết cùng đề cập đến một chủ đề tương tự, chúng tôi ưu tiên chọn những ấn phẩm được xuất bản gần đây nhất.</p>
+
+    <h2>3. Định nghĩa</h2>
+    <p>Hiện tại vẫn chưa có một định nghĩa nào về tăng kali máu được chấp thuận thống nhất trên toàn cầu. Hội đồng Hồi sức Châu Âu (European Resuscitation Council), Hiệp hội Thận học Vương quốc Anh (UK Kidney Association), và tổ chức Kidney Disease: Improving Global Outcomes (KDIGO) xác định ngưỡng tăng kali máu là khi nồng độ kali huyết thanh \( \ge 5,5 \) mmol/L.<sup>4 6 7</sup> Trong khi đó, Hiệp hội Tim mạch Hoa Kỳ (American Heart Association) và Viện Hàn lâm Bác sĩ Gia đình Hoa Kỳ (American Academy of Family Physicians) lại áp dụng mức cắt (cut-off) kali huyết thanh là \( \ge 5,0 \) mmol/L.<sup>1 5</sup> Bảng 1 trình bày chi tiết các định nghĩa phân loại theo mức độ nghiêm trọng. Dù áp dụng định nghĩa nào, nguy cơ đối với bệnh nhân luôn diễn tiến theo một chuỗi liên tục chứ không phụ thuộc vào một ngưỡng giới hạn cứng nhắc.</p>
+
+<div class="table-wrapper">
+    <table class="rec-table" style="text-align: center; width: 100%; font-size: 14px;">
+        <caption style="text-align: center; font-weight: bold; margin-bottom: 8px; font-size: 16px;">
+            Bảng 1: Định nghĩa về tăng kali máu<sup>1,4-7</sup>
+        </caption>
+        <thead>
+            <tr>
+                <th style="width: 15%; text-align: center; vertical-align: middle; padding: 8px 5px; background-color: #b30000; color: white;">
+                    Định nghĩa <br> tăng kali máu*
+                </th>
+                <th style="width: 37.5%; text-align: center; vertical-align: middle; padding: 8px 5px; background-color: #b30000; color: white;">
+                    Hội đồng Hồi sức Châu Âu (European Resuscitation Council), Hiệp hội Thận học Vương quốc Anh (UK Kidney Association), và Tổ chức Cải thiện Kết cục Bệnh thận Toàn cầu (KDIGO)
+                </th>
+                <th style="width: 37.5%; text-align: center; vertical-align: middle; padding: 8px 5px; background-color: #b30000; color: white;">
+                    Hiệp hội Tim mạch Hoa Kỳ (AHA) và Viện Hàn lâm Bác sĩ Gia đình Hoa Kỳ (AAFP)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    <strong>Định nghĩa chung</strong>
+                </td>
+                <td class="ws-nowrap" style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    Kali huyết thanh \( \ge 5,5 \) mmol/L
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    Kali huyết thanh \( \ge 5,0 \) mmol/L dựa trên nồng độ huyết thanh và các dấu hiệu trên điện tâm đồ (ECG)
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    <strong>Nhẹ</strong>
+                </td>
+                <td class="ws-nowrap" style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    5,5 – 5,9 mmol/L
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    5,0 – 5,9 mmol/L không kèm theo biến đổi trên ECG
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    <strong>Trung bình</strong>
+                </td>
+                <td class="ws-nowrap" style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    6,0 – 6,4 mmol/L
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    5,0 – 5,9 mmol/L có kèm biến đổi trên ECG <em>hoặc</em> 6,0 – 6,4 mmol/L không kèm biến đổi trên ECG
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    <strong>Nặng</strong>
+                </td>
+                <td class="ws-nowrap" style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    \( \ge 6,5 \) mmol/L
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 8px 5px;">
+                    6,0 – 6,4 mmol/L có kèm biến đổi trên ECG <em>hoặc</em> \( > 6,5 \) mmol/L không kèm biến đổi trên ECG
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="font-size: 13px; color: #4a4a4a; text-align: justify; padding: 12px 15px; background-color: #f9f9f9; border-left: 4px solid #c0c0c0; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; line-height: 1.5;">
+                    <strong>ECG:</strong> Điện tâm đồ.<br>
+                    * Các hướng dẫn của Hoa Kỳ sử dụng đơn vị mEq/L, đã được chuyển đổi đồng loạt sang mmol/L (đối với kali, 1 mmol/L = 1 mEq/L).
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+    <h2>4. Dịch tễ học</h2>
+    <p>Tỷ lệ lưu hành của chứng tăng kali máu trong quần thể dân số chung được ước tính dao động từ 1,5% đến 3%.<sup>8-10</sup> Các nghiên cứu quy mô lớn dựa trên cơ sở dữ liệu bồi thường bảo hiểm và Medicare tại Hoa Kỳ ghi nhận tỷ lệ hiện mắc hàng năm rơi vào khoảng 1,5-2,7%, với tỷ lệ cao hơn rõ rệt (6,4-9,3%) ở nhóm đối tượng mắc bệnh thận mạn tính (CKD) hoặc suy tim, hoặc đồng thời mắc cả hai bệnh lý này.<sup>9 11</sup> Con số thống kê này rất có khả năng đã bị ước tính thấp hơn thực tế và còn phụ thuộc vào nhiều biến số khác, bao gồm tiêu chí định nghĩa bệnh và độ nhạy của các xét nghiệm cận lâm sàng. Tuổi cao, CKD, suy tim, đái tháo đường, tăng huyết áp, cùng với việc sử dụng một số nhóm thuốc nhất định, đều là những nhân tố đẩy cao nguy cơ cũng như mức độ nghiêm trọng của bệnh.<sup>9 12 13</sup></p>
+
+    <p>Tình trạng tăng kali máu xuất hiện với tần suất dày đặc tại khoa cấp cứu và khu nội trú, phản ánh mối tương quan sâu sắc giữa rối loạn này với các bệnh lý cấp tính, tương tác thuốc và các bệnh mạn tính tiềm ẩn.<sup>1 4</sup> Một nghiên cứu cắt ngang trên cơ sở dữ liệu yêu cầu bồi thường y tế đã chỉ ra rằng, chỉ riêng trong năm 2011, tại Hoa Kỳ đã có xấp xỉ 814.000 lượt bệnh nhân đến khoa cấp cứu liên quan đến tăng kali máu.<sup>14</sup> Tỷ lệ bệnh nhân nội trú mắc phải tình trạng này được báo cáo nằm trong khoảng 1,1% đến 10%, tùy thuộc vào quần thể nghiên cứu.<sup>15 16</sup> Dù dữ liệu tại Vương quốc Anh còn hạn chế, một số nghiên cứu cũng đã cho thấy những kết quả tương đồng.<sup>16 17</sup> Tỷ lệ hiện mắc cao này đã nhấn mạnh sự bức thiết của việc nhận diện kịp thời, phân tầng nguy cơ chuẩn xác và thiết lập các phác đồ xử trí chuẩn hóa nhằm ngăn chặn những hệ lụy bất lợi.</p>
+
+    <h2>5. Sinh lý học và Sinh lý bệnh học</h2>
+    <p>Kali đảm nhận muôn vàn vai trò thiết yếu trong cơ thể, nhưng chức năng chủ chốt nhất của nó là điều hòa tính hưng phấn của cơ tim và các mô cơ khác. Phần lớn lượng kali cư trú bên trong tế bào (98%), trong khi đó, lượng kali ngoại bào (2%) lại được kiểm soát vô cùng chặt chẽ thông qua cơ chế nội môi (homeostasis). Nồng độ kali huyết thanh bình thường được giới y khoa thống nhất rộng rãi ở mức 3,5 đến 5,0 mmol/L.<sup>1 4 7</sup> Bởi lẽ cửa sổ điều trị rất hẹp, chỉ những dao động nhỏ cũng đủ sức gây ra những hậu quả khôn lường, điển hình nhất là các chứng rối loạn nhịp tim tử vong và ngừng tim.<sup>18</sup> Chính vì vậy, nồng độ kali ngoại bào và huyết thanh chủ yếu được duy trì ổn định nhờ vào sự tương tác nhịp nhàng của ba cơ chế: cân bằng axit-bazơ, khả năng vận chuyển - bài tiết của thận, và hệ thống tín hiệu nội tiết tố (Hình 1).<sup>18</sup></p>
+
+    <p>Thuyết cân bằng axit-bazơ đóng một vai trò nền tảng trong việc duy trì nội môi kali, thông qua các tác động lên sự dịch chuyển kali xuyên tế bào và cách thận xử lý ion này.<sup>19</sup> Sự phân bố kali chịu sự chi phối của các kênh vận chuyển nhạy cảm với pH.<sup>20</sup> Trong tình trạng nhiễm toan máu (acidaemia), sự cản trở quá trình trao đổi \( \text{Na}^+/\text{H}^+ \) làm sụt giảm lượng natri nội bào, từ đó ức chế hoạt động của bơm \( \text{Na}^+/\text{K}^+\text{-ATPase} \) và kích hoạt dòng chảy của kali ra ngoại bào.<sup>21</sup> Nhiễm toan chuyển hóa được cho là gây ra mức độ tăng kali máu trầm trọng hơn so với nhiễm toan hô hấp, dẫu cho mối tương quan này mang tính biến thiên. Các trạng thái nhiễm toan chuyển hóa hữu cơ (ví dụ: nhiễm toan ceton do đái tháo đường, nhiễm toan lactic) có thể không gây tăng kali máu đáng kể dù tình trạng toan máu rất nặng, bởi sự thiếu hụt insulin, tác động của catecholamine và sự thất thoát kali qua thận đã làm thay đổi cán cân kali thuần.<sup>19 21 22</sup></p>
+
+    <p>Thận cũng giữ một trọng trách lớn lao trong việc cân bằng nội môi kali. Bên cạnh sự dịch chuyển xuyên tế bào, trạng thái axit-bazơ còn tạo ra những hiệu ứng phức tạp và lệ thuộc vào thời gian đối với cơ chế xử lý kali ở thận. Đơn cử, trong giai đoạn đầu của nhiễm toan chuyển hóa, lượng kali bài tiết qua nước tiểu sụt giảm, trong khi ở những giai đoạn muộn hơn, tình trạng này lại thúc đẩy bài tiết kali qua đường niệu và dẫn đến hạ kali máu.<sup>21</sup> Khi nồng độ kali huyết thanh dâng cao, aldosterone được tổng hợp, làm tăng biểu hiện của các kênh natri biểu mô và bơm \( \text{Na}^+/\text{K}^+\text{-ATPase} \) ở đoạn xa của nephron. Hệ quả cuối cùng của aldosterone là tăng cường bài tiết kali qua thận.<sup>23</sup> Tuy nhiên, trong các bệnh lý như CKD và suy tim mất bù, chức năng nephron suy yếu cùng tình trạng giảm tưới máu thận đã kìm hãm khả năng bài tiết kali, đẩy bệnh nhân vào thế dễ bị tăng kali máu.<sup>24</sup></p>
+
+    <p>Nhiều cơ chế nội tiết tố cũng tham gia vào việc điều hòa cân bằng kali. Cơ chế điều khiển "tiến hướng" (feedforward control) mô tả các tín hiệu nội tiết tố được phát ra trong giai đoạn sau bữa ăn. Insulin là nhân tố nổi tiếng nhất; ngoài việc hỗ trợ tế bào hấp thu glucose, nó còn kích thích sản sinh bơm \( \text{Na}^+/\text{K}^+\text{-ATPase} \), qua đó kéo kali vào bên trong tế bào.<sup>18 21 24</sup> Catecholamine, thông qua việc kích hoạt thụ thể \( \beta_2 \) adrenergic, cũng vận chuyển kali vào nội bào nhằm bù đắp cho lượng kali giải phóng ra trong quá trình co cơ hoặc tăng trương lực giao cảm. Trái lại, kích thích thụ thể \( \alpha \) adrenergic lại gây giải phóng kali ra ngoại bào, nhưng tác động này thường không đáng kể.<sup>24</sup> Các con đường tín hiệu nội tiết tố khác cũng diễn ra giữa mạc treo ruột và thận theo một cách thức đón đầu nhằm tạo vùng đệm cho nồng độ kali sau bữa ăn.<sup>23</sup> Bất chấp sự tương tác nội tiết tố phức tạp này, có từ 5% đến 10% lượng kali được tiết ra ở ruột kết và thải trừ qua phân.<sup>25</sup> Do đó, lượng kali thất thoát có thể rất lớn nếu bệnh nhân bị tiêu chảy nặng.<sup>26</sup></p>
+
+    <p>Một cơ chế ít được nhấn mạnh hơn nhưng lại mang tính sống còn trên lâm sàng góp phần gây tăng kali máu là sự gia tăng áp lực thẩm thấu (tính ưu trương) của huyết tương. Các trạng thái ưu trương thúc đẩy dòng nước thoát ra khỏi tế bào, kéo theo sự di chuyển của kali ngoại bào thông qua hiện tượng "kéo theo dung môi" (solvent drag) và sự khuếch tán thụ động phụ thuộc vào nồng độ.<sup>27</sup> Khi tế bào mất nước và co rút lại, nồng độ kali nội bào tăng lên, tiếp tục khuếch đại dòng kali thoát ra ngoài theo gradient nồng độ và góp phần làm bùng nổ nồng độ kali huyết thanh. Trên lâm sàng, hiện tượng này thể hiện rõ nét nhất trong các cơn khủng hoảng tăng đường huyết (ví dụ: nhiễm toan ceton do đái tháo đường và trạng thái tăng áp lực thẩm thấu do tăng đường huyết) và, ở mức độ nhẹ hơn, khi sử dụng các chất ưu trương như mannitol, nơi sự dịch chuyển nước do áp lực thẩm thấu có thể làm tăng kali huyết thanh độc lập với tổng lượng dự trữ kali của cơ thể.</p>
+
+    <p>Ở những bệnh nhân mắc bệnh lý về thận, nguy cơ tăng kali máu tương quan chặt chẽ với sự suy giảm mức lọc cầu thận ước tính (eGFR). Hiệp hội Tiên lượng Bệnh thận Mạn tính (CKD Prognosis Consortium, 2018) đã phân tích dữ liệu của hơn một triệu bệnh nhân từ nhiều đoàn hệ quốc tế và chứng minh rằng nguy cơ tăng kali máu tỷ lệ nghịch với sự suy giảm eGFR.<sup>28</sup> Mặc dù mối liên hệ này không mang tính tuyến tính, nhưng các nghiên cứu quan sát trước đây cho thấy cứ mỗi 15 mL/phút/1,73 m² eGFR sụt giảm, nguy cơ tăng kali máu (kali huyết thanh > 5,5 mmol/L) lại tăng xấp xỉ gấp đôi, với mức rủi ro đỉnh điểm được ghi nhận ở ngưỡng eGFR < 15 mL/phút/1,73 m².<sup>18</sup> Dù cho sự gia tăng thích ứng trong việc bài tiết kali ở đoạn xa nephron có thể bù đắp phần nào ở những giai đoạn đầu của CKD, các cơ chế này dần trở nên bất lực khi chức năng thận tiếp tục xuống cấp, đặc biệt là khi có sự hiện diện của các bệnh lý đồng mắc, tình trạng giảm thể tích tuần hoàn, hoặc việc sử dụng các loại thuốc làm tăng kali.</p>
+
+<figure style="margin: 2rem auto;">
+    <img src="https://file.garden/aRcee0oeuCLsBw6X/jbm-2026-hyperkalemia/01.jpg" alt="Cơ chế cân bằng nội môi kali">
+    <figcaption class="image-caption">
+        <strong>Hình 1. Cơ chế cân bằng nội môi kali.<sup>18</sup></strong> 
+        <span style="color: #707070; font-style: italic;">
+            Sơ đồ mô tả sự tác động của thăng bằng toan kiềm, hormone và tình trạng ưu trương lên sự dịch chuyển ion kali giữa tế bào và khoang ngoại bào, cùng các cơ chế tái hấp thu/bài tiết kali tại thận.
+        </span>
+    </figcaption>
+</figure>
+    <h2>6. Hậu quả của việc tăng kali máu</h2>
+    <p>Tăng kali máu kéo theo một loạt các hiệu ứng lâm sàng tiêu cực, bao gồm rối loạn nhịp tim và ngừng tim, rối loạn chức năng thần kinh cơ, toan hóa ống thận, và làm gia tăng tỷ lệ tử vong.<sup>29-32</sup> Các ca nhập viện liên quan đến tăng kali máu cũng ngốn một khoản chi phí khổng lồ, chiếm khoảng 1,2 tỷ USD trong tổng chi phí điều trị nội trú tại Hoa Kỳ vào năm 2014.<sup>33</sup> Mặc dù các nghiên cứu dịch tễ học bên ngoài Hoa Kỳ còn hạn chế, một nghiên cứu đoàn hệ hồi cứu tại Tây Ban Nha trên 1.181 bệnh nhân suy tim có phân suất tống máu giảm đã ghi nhận 438 đợt tăng kali máu ở 262 bệnh nhân, tiêu tốn đến 89.178,82 EUR chi phí chăm sóc y tế trong suốt 64 tháng.<sup>34</sup></p>
+
+    <p>Biến chứng đáng sợ và được biết đến nhiều nhất của tăng kali máu là sự phát triển của các rối loạn nhịp tim. Hàng loạt các bất thường về dẫn truyền có thể xảy ra, bao gồm cả rối loạn nhịp nhanh (tâm nhĩ và tâm thất) và nhịp chậm. Mức độ kali chính xác để kích hoạt các rối loạn nhịp này biến thiên tùy theo từng cá nhân.<sup>1 6 18 35 36</sup> Các bất thường trong dẫn truyền tim nảy sinh là do sự gia tăng lượng kali ngoại bào làm giảm điện thế màng lúc nghỉ của tế bào cơ tim, dẫn đến màng tế bào bị khử cực một phần. Việc các kênh natri nhanh bị vô hiệu hóa sẽ làm chậm quá trình khử cực pha 0, kéo theo sự sụt giảm tốc độ dẫn truyền qua tâm nhĩ, nút nhĩ thất và tâm thất.<sup>37</sup> Khi nồng độ kali tiếp tục leo thang, tình trạng này sẽ hiển hiện trên điện tâm đồ (ECG) dưới dạng sóng T cao nhọn, khoảng PR kéo dài, phức bộ QRS giãn rộng, và cuối cùng tiến triển thành hình thái sóng hình sin (sine wave) – một dấu hiệu phản ánh sự chậm trễ dẫn truyền tiến triển, cảnh báo nguy cơ rối loạn nhịp thất và vô tâm thu (asystole).<sup>37 38</sup></p>
+
+    <p>Các nghiên cứu đã phơi bày một mối tương quan mật thiết giữa tình trạng tăng kali máu và tỷ lệ tử vong tại bệnh viện.<sup>39 40</sup> Một phân tích quy mô lớn trên hơn 900.000 bệnh nhân nội trú đã cho thấy tỷ lệ tử vong do mọi nguyên nhân tăng vọt với mỗi 0,1 mmol/L thay đổi ở cả ngưỡng kali thấp (< 4 mmol/L) và cao (> 5,0 mmol/L), tạo thành một biểu đồ hình chữ U.<sup>41</sup> Một phân tích gộp (meta-analysis) từ 27 nghiên cứu đoàn hệ (n = 1.217.986) cũng phác họa một đường cong hình chữ U tương tự, trong đó nguy cơ biến cố bất lợi chạm đáy ở mức 4-4,5 mmol/L.<sup>28</sup> So với nồng độ tham chiếu 4,2 mmol/L, tỷ số nguy cơ đã điều chỉnh (adjusted hazard ratio) cho tỷ lệ tử vong do mọi nguyên nhân là 1,22 (khoảng tin cậy [KTC] 95% từ 1,15 đến 1,29) tại mức kali 5,5 mmol/L. Một nghiên cứu đoàn hệ hồi cứu đồ sộ với gần 50.000 bệnh nhân nhập viện đã vạch trần một nguy cơ tử vong vô cùng lớn khi nồng độ kali huyết thanh ban đầu \( > 6,0 \) mmol/L (tỷ số chênh lệch đã điều chỉnh [adjusted OR] là 5,0; KTC 95% từ 2,9 đến 8,6).<sup>42</sup> Cuối cùng, một bài tổng quan hệ thống và phân tích gộp trên 5 nghiên cứu (n = 246.612) đã phát hiện ra một đường cong hình chữ U tương đồng đối với thời gian nằm viện, với thời gian lưu viện ngày càng kéo dài ở những nồng độ kali huyết thanh cao hơn. Khi đặt lên bàn cân với nhóm tham chiếu (3,5-5,0 mmol/L), chênh lệch thô gộp của trung vị thời gian nằm viện lần lượt là: 4,45 (KTC 95%: 2,71 đến 6,91), 1,99 (0,03 đến 3,94), 0,98 (0,91 đến 1,05), 1,51 (1,03 đến 2,0), 1 (0,75 đến 1,25), và 2,76 (1,24 đến 4,29) đối với các nhóm bệnh nhân có mức kali tương ứng là < 2,5; từ 2,5 đến < 3,0; từ 3,0 đến < 3,5; từ < 5 đến 5,5; từ < 5,5 đến 6; và > 6,0 mmol/L.<sup>43</sup> Những mối tương quan này vẫn hiện hữu ngay cả khi tăng kali máu chỉ được phát hiện như một tình trạng thứ phát, càng tô đậm thêm vai trò của nó như một dấu ấn báo hiệu độ nặng của bệnh, đồng thời là một tác nhân có thể can thiệp được nhằm hạn chế những kết cục tồi tệ trong môi trường chăm sóc cấp tính. Hơn thế nữa, tăng kali máu còn gắn liền với các hệ lụy bất lợi lâu dài. Nghiên cứu chỉ ra rằng, bất luận có phải nhập viện hay không trong lần thăm khám đầu tiên, bệnh nhân bị tăng kali máu đều phải gánh chịu việc phải xét nghiệm thường xuyên hơn, gia tăng số lần khám ngoại trú và tỷ lệ cần phải lọc máu, dẫn đến sự gia tăng phi mã chi phí và gánh nặng cho hệ thống y tế.<sup>44-46</sup></p>
+
+    <h2>7. Nguyên nhân và yếu tố nguy cơ của tăng kali máu</h2>
+    <p>Các yếu tố nguy cơ phổ biến dẫn đến sự khởi phát của tăng kali máu cấp tính có thể được quy vào một vài nhóm nguyên lý chủ đạo: suy giảm chức năng bài tiết của thận, sự dịch chuyển qua màng tế bào, và dung nạp quá mức từ bên ngoài. Về tổng thể, chức năng thận suy thoái, nồng độ kali nền cao hơn, cùng sự hiện diện của các bệnh lý đồng mắc như suy tim, đái tháo đường, tổn thương thận cấp tính, và bệnh thận mạn (CKD) đều là những yếu tố gắn chặt với sự tiến triển của bệnh lý tăng kali máu.<sup>47 48</sup></p>
+
+    <h3>Suy giảm chức năng bài tiết của thận</h3>
+    <p>Bởi 90% lượng kali trong cơ thể được đào thải qua thận, một khi xuất hiện tổn thương thận cấp tính, tình trạng tăng kali máu cũng sẽ trỗi dậy theo.<sup>18 27</sup> Khi hệ thống RAAS bị khiếm khuyết do các bệnh lý tiềm ẩn hoặc do sự ức chế từ dược lý, năng lực bài tiết kali của thận sẽ bị triệt tiêu đáng kể. Rủi ro tăng kali máu thường bị đẩy lên cao hơn do việc sử dụng các liệu pháp dược lý dựa trên bằng chứng vốn rất thiết yếu trong việc cắt giảm tỷ lệ mắc bệnh và tử vong ở các bệnh lý như đái tháo đường, tăng huyết áp, suy tim, và CKD.<sup>48-52</sup> Các nhóm thuốc này bao gồm thuốc ức chế men chuyển angiotensin (ACEi), thuốc chẹn thụ thể angiotensin (ARB), thuốc đối kháng thụ thể mineralocorticoid, và thuốc ức chế renin trực tiếp; tất thảy đều kìm hãm quá trình bài tiết kali qua trung gian aldosterone tại đoạn xa của ống thận.<sup>5</sup> Những tác nhân dược lý khác thường xuyên bị réo tên trong các ca tăng kali máu bao gồm nhóm thuốc lợi tiểu tiết kiệm kali (ví dụ: amiloride, triamterene), thuốc kháng viêm không steroid (NSAID), heparin, trimethoprim, thuốc ức chế calcineurin, succinylcholine, và thuốc chẹn beta adrenergic, bởi chúng can thiệp trực tiếp vào quá trình xử lý kali ở thận hoặc quá trình dịch chuyển kali xuyên tế bào thông qua nhiều cơ chế phức tạp.<sup>53</sup> Tổn thương thận cấp tính và CKD làm sụt giảm mức lọc cầu thận, trong khi hội chứng suy giảm aldosterone (hypoaldosteronism) lại ngáng đường quá trình tiết kali bên trong ống góp xa của nephron.<sup>4 7 49</sup> Vô số loại thuốc lại càng cản trở thêm quá trình đào thải ở thận, đơn cử như các thuốc ức chế RAAS, lợi tiểu giữ kali, các chất kháng viêm không steroid, và nhiều thuốc khác.</p>
+
+    <h3>Sự dịch chuyển xuyên tế bào</h3>
+    <p>Sự dịch chuyển kali xuyên màng tế bào đóng góp một phần không nhỏ vào tình trạng tăng kali máu trong các bối cảnh như nhiễm toan, thiếu hụt insulin (ví dụ: nhiễm toan ceton do đái tháo đường), phân hủy mô (ví dụ: tiêu cơ vân, chấn thương hoặc chấn thương do dập nát, hội chứng ly giải khối u), và do tác động của một số loại thuốc (ví dụ: digoxin, succinylcholine).<sup>49 54-56</sup> Ngoài ra, tăng kali máu cũng đã được ghi nhận trong bối cảnh bệnh nhân bị bỏng điện và các chấn thương liên quan đến chiến đấu.<sup>57 58</sup></p>
+
+    <h3>Tăng lượng kali nạp vào</h3>
+    <p>Việc gia tăng lượng kali nạp vào đơn thuần rất hiếm khi là nguyên nhân duy nhất dẫn đến tăng kali máu, nhờ vào khả năng bài tiết kali cực kỳ ưu việt của thận.<sup>49 59</sup> Tuy nhiên, trên nền bệnh nhân có CKD hoặc tổn thương thận cấp tính, năng lực đào thải này có thể bị vô hiệu hóa. Tình trạng tăng kali máu do điều trị (iatrogenic hyperkalaemia) có thể xảy ra, thường là hệ quả thứ phát của việc bổ sung kali (qua đường uống hoặc tiêm tĩnh mạch) hoặc truyền máu.<sup>4 49</sup> Các chất thay thế muối chứa kali và các sản phẩm thảo dược (ví dụ: cỏ linh lăng - alfalfa, bồ công anh, bông tai - milkweed) cũng có thể đóng vai trò như một nguồn cung cấp kali ngoại sinh.<sup>7 49</sup></p>
+
+    <p>Các nhóm quần thể đặc thù đòi hỏi sự cảnh giác cao độ. Bệnh nhân đang chạy thận nhân tạo là đối tượng tiềm ẩn rủi ro đặc biệt lớn, chịu tác động trực tiếp từ chế độ ăn uống, tần suất và thời lượng chạy thận, khả năng kiểm soát đường huyết và tình trạng táo bón.<sup>60-62</sup> Việc sử dụng nhiều loại thuốc (polypharmacy) và gánh nặng của nhiều bệnh lý nền cùng lúc càng khuếch đại rủi ro này, nhất là khi bệnh nhân được kê đơn đồng thời nhiều loại thuốc làm tăng kali (ví dụ: thuốc ức chế men chuyển angiotensin, thuốc đối kháng aldosterone, thuốc kháng viêm không steroid, thuốc chẹn beta).<sup>44 48 63-66</sup></p>
+
+    <h2>8. Giả tăng kali máu (Pseudohyperkalaemia)</h2>
+    <p>Cuối cùng, giả tăng kali máu là tình trạng nồng độ kali trong huyết thanh bị báo cáo tăng cao một cách sai lệch mà không đi kèm bất kỳ bất thường sinh lý thực sự nào.<sup>67</sup> Thủ phạm quen mặt nhất chính là thời gian lưu trữ mẫu máu quá lâu trước khi đưa vào hệ thống phân tích hoặc điều kiện bảo quản không đảm bảo tiêu chuẩn.<sup>68</sup> Thêm vào đó, hành động nắm chặt tay của bệnh nhân khi lấy máu, mẫu máu bị tán huyết (ví dụ: do thời gian garo vượt quá một phút, sử dụng kim tiêm cỡ nhỏ, chấn thương cơ học), tình trạng tăng tiểu cầu, và tăng bạch cầu đều có thể là nguồn cơn của giả tăng kali máu.<sup>59 68</sup> Các dung dịch truyền chứa kali cũng có khả năng làm nhiễm bẩn mẫu xét nghiệm nếu máu được rút ra từ cùng một đường truyền đang sử dụng. Hình 2 trình bày một bản tóm tắt toàn diện về các nguyên nhân, yếu tố nguy cơ, và những lưu ý đặc thù mà các chuyên gia y tế cần phải khắc cốt ghi tâm để luôn duy trì một sự nghi ngờ cao độ về sự hiện diện của chứng tăng kali máu.</p>
+
+<figure style="margin: 2rem auto;">
+    <img src="https://file.garden/aRcee0oeuCLsBw6X/jbm-2026-hyperkalemia/02.jpg" alt="Nguyên nhân, yếu tố nguy cơ và các lưu ý đặc biệt đối với tăng kali máu">
+    <figcaption class="image-caption">
+        <strong>Hình 2. Nguyên nhân, yếu tố nguy cơ và các lưu ý đặc biệt đối với tăng kali máu.</strong> 
+        <span style="color: #707070; font-style: italic;">
+            Sơ đồ tổng quan về các yếu tố thúc đẩy tăng kali máu thực sự, nguyên nhân gây giả tăng kali máu và các nhóm thuốc, bệnh lý cần cảnh giác cao độ trên lâm sàng.
+        </span>
+    </figcaption>
+</figure>
+
+    <h2>9. Chẩn đoán tăng kali máu cấp tính</h2>
+    <h3>Triệu chứng</h3>
+    <p>Phần lớn bệnh nhân bị tăng kali máu đều không bộc lộ bất kỳ triệu chứng nào; sự bất thường thường chỉ bị vạch trần thông qua thao tác tầm soát bằng điện tâm đồ (ECG) hoặc các phân tích cận lâm sàng thường quy.<sup>5</sup> Cảm giác tê rần (paraesthesia) và các đợt giật rùng cơ bắp có thể là những dấu hiệu cảnh báo sớm.<sup>49</sup> Liệt cơ, rối loạn nhịp tim và ngừng tim chính là những biểu hiện mang mầm mống tử thần.<sup>27 39</sup> Các triệu chứng ít gặp hơn bao gồm buồn nôn và mệt mỏi bải hoải. Về mặt lâm sàng, tình trạng yếu cơ do tăng kali máu thường mang tính chất đi lên, bắt nguồn từ đôi chân rồi lan dần lên thân mình, đôi khi vẽ ra một bức tranh triệu chứng hao hao như hội chứng Guillain-Barré.<sup>49</sup> Một nghiên cứu đoàn hệ hồi cứu trên 923 bệnh nhân nhập viện với tình trạng tăng kali máu nặng đã hé lộ rằng có 46,8% bệnh nhân xuất hiện các triệu chứng do hệ lụy của tăng kali máu, với 20,3% phải đối mặt với cơn ngừng tim và 35,2% có biểu hiện rối loạn nhịp tim.<sup>39</sup> Ở một số bệnh nhân, những triệu chứng này có thể bắt nguồn từ chính bệnh lý nền gây ra chứ không hẳn là do tăng kali máu trực tiếp, đơn cử như tình trạng chuột rút trong bệnh lý tiêu cơ vân.</p>
+
+    <h3>Dấu hiệu trên điện tâm đồ (ECG)</h3>
+    <p>ECG là một vũ khí sắc bén và thần tốc trong việc chẩn đoán và phân tầng nguy cơ của tăng kali máu; tuy nhiên, nó lại không phải là một công cụ dự đoán kết cục đáng tin cậy.<sup>69</sup> Hơn thế nữa, độ nhạy của ECG trong việc dò tìm tình trạng tăng kali máu là khá thấp và không có sự tương quan tuyến tính một cách chắn chắn với nồng độ kali trong huyết thanh.<sup>69 70</sup> Những bất thường này có thể đóng vai trò như một dấu ấn phản ánh sự gia tăng đột ngột của kali huyết thanh hơn là việc chỉ ra một nồng độ kali cụ thể. Do đó, việc quyết định ngưỡng bắt đầu điều trị tuyệt đối không nên chỉ nhắm mắt trông chờ vào các dấu hiệu trên ECG và tiến trình điều trị không được phép trì hoãn trong lúc mòn mỏi chờ đợi các biểu hiện ECG kinh điển xuất.<sup>5</sup> Một trong những tín hiệu ECG sớm nhất tố cáo nồng độ kali tăng cao là sóng T "cao nhọn" (Hình 3). Khi mức kali tiếp tục leo thang, ECG có thể diễn tiến đến việc khoảng PR kéo dài và phức bộ QRS giãn rộng. Một bệnh cảnh trình diện vô cùng phổ biến và cực kỳ hung hiểm của tăng kali máu nặng (ví dụ: kali \(>6,5\) mmol/L, có biến đổi ECG, hoặc cả hai) là nhịp chậm bộ nối (junctional bradycardia) và hình thái sóng hình sin. Dạng nhịp này rất dễ bị chẩn đoán nhầm thành nguyên nhân từ bệnh lý tim mạch nguyên phát, nhưng thực tế lại thường có thể đảo ngược nhanh chóng sau khi tiêm truyền canxi. Trong một phân tích hồi cứu trên 188 bệnh nhân mắc tăng kali máu thể nặng, các biểu hiện như khoảng QRS kéo dài (nguy cơ tương đối 4,7, KTC 95% 2,0 đến 11,6), nhịp chậm (12,3, 6,7 đến 22,6), và nhịp bộ nối (7,5, 5,3 đến 11,1) là những dấu hiệu có khả năng cao nhất liên quan đến một biến cố bất lợi nghiêm trọng như rung thất, phải hô hấp nhân tạo, hoặc tử vong trong vòng sáu giờ.<sup>71</sup> Hơn thế nữa, một nghiên cứu quan sát tiến cứu trên 203 bệnh nhân đã dội một gáo nước lạnh vào niềm tin về ECG khi phát hiện ra rằng sóng T cao nhọn chỉ xuất hiện ở \(<25\%\) số bệnh nhân có mức kali từ 5,5-7,0 mmol/L và chỉ vỏn vẹn \(35\%\) ở nhóm có kali \(>7,0\) mmol/L; trong khi đó, QRS giãn rộng chỉ bộc lộ ở \(<13\%\) số bệnh nhân có ngưỡng kali 5,5-7,0 mmol/L.<sup>15</sup></p>
+
+    <p>Tăng kali máu nguy cơ cao nói chung được gắn nhãn khi nồng độ kali huyết thanh chạm mức \(>6,5\) mmol/L hoặc xuất hiện các biến đổi bệnh lý trên ECG, hoặc cả hai. Dù vậy, công tác phân tầng nguy cơ bắt buộc phải bao quát cả tốc độ gia tăng của kali, các bệnh lý nền đi kèm, và các biểu hiện lâm sàng sờ thấy được như yếu cơ, liệt, hay tình trạng huyết động không ổn định.<sup>4 5 49</sup></p>
+</div>
+
+<figure style="margin: 2rem auto;">
+    <img src="https://file.garden/aRcee0oeuCLsBw6X/jbm-2026-hyperkalemia/03.jpg" alt="Các biến đổi trên điện tâm đồ theo nồng độ kali">
+    <figcaption class="image-caption">
+        <strong>Hình 3. Các biến đổi trên điện tâm đồ (ECG) theo từng nồng độ kali khác nhau.</strong> 
+        <span style="color: #707070; font-style: italic;">
+            Sơ đồ minh họa sự tiến triển của các dạng sóng trên ECG tương ứng với mức độ tăng hoặc giảm nồng độ kali huyết thanh, từ sóng T cao nhọn, giãn rộng phức bộ QRS, kéo dài PR cho đến hình thái sóng hình sin đe dọa tính mạng.
+        </span>
+    </figcaption>
+</figure>
+
+    <h2>9. Xét nghiệm huyết thanh</h2>
+    <p>Cánh cửa phòng thí nghiệm cung cấp nhiều lựa chọn để đo lường kali huyết thanh. Các phép đo kali trong huyết tương (plasma) và máu toàn phần (whole blood) có sự chênh lệch rõ rệt về khâu xử lý mẫu và khả năng dễ bị tổn thương trước các lỗi tiền phân tích trong chẩn đoán tăng kali máu cấp tính.<sup>72</sup> Kali huyết tương được đo từ mẫu máu đã được chống đông và mang đi ly tâm để loại bỏ các thành phần tế bào, qua đó kìm hãm sự giải phóng kali từ tế bào và mang lại một con số ước lượng đáng tin cậy về lượng kali đang lưu thông.<sup>73</sup> Máu toàn phần được tiến hành đo đạc mà không qua bước ly tâm, phổ biến nhất là thông qua các máy phân tích tại điểm chăm sóc (point-of-care), và bao gồm cả các thành phần tế bào còn nguyên vẹn. Dù cho việc thử máu toàn phần trả về kết quả nhanh như chớp, phương pháp này lại mong manh hơn trước những sai số do thao tác xử lý và đặc biệt là không thể đánh hơi được tình trạng tán huyết – kẻ giấu mặt thường xuyên dẫn đến chứng giả tăng kali máu.<sup>74 75</sup> Ở phần lớn bệnh nhân, kết quả kali đo qua máu toàn phần thường thấp hơn đôi chút so với huyết tương, dẫu cho những sự chênh lệch có ý nghĩa lâm sàng hoàn toàn có thể xảy ra do hiện tượng giả tăng kali máu.<sup>74 75</sup> Các máy phân tích tại điểm chăm sóc (đo máu toàn phần) có thể được triển khai ngay tại phòng xét nghiệm hoặc ngay tại giường bệnh, bao gồm một hệ thống máy chính đi kèm với các hộp mực (cartridge) chuyên dụng để đo kali. Những thiết bị này phát huy sức mạnh tối đa trong việc cung cấp một ước lượng thần tốc về mức kali, ứng dụng hữu hiệu trên xe cấp cứu hoặc trong quá trình vận chuyển hồi sức tích cực; tuy nhiên, các kết quả này thường xuyên đòi hỏi phải có sự xác nhận lại bằng các xét nghiệm sinh hóa trung tâm. Các thiết bị đo máu toàn phần sẽ bị "mù" và không thể phát tín hiệu cảnh báo nếu có hiện tượng tán huyết, đồng nghĩa với việc một kết quả báo động cao có thể bị diễn giải nhầm thành bất thường trong khi lượng kali lưu thông thực tế lại hoàn toàn yên bình. Nếu một mẫu máu toàn phần trả về kết quả bất thường, bắt buộc phải đối chiếu và xác nhận lại bằng mẫu kali huyết tương. Cẩn trọng hơn, nếu một mẫu huyết tương bị kết luận là bất thường và phòng lab ghi nhận có sự tán huyết, hãy lập tức lấy một mẫu máu mới. Một sai lầm kinh điển và đầy rẫy trên lâm sàng là nỗ lực đi tìm sự xác nhận cho một mẫu huyết tương bất thường bằng cách dùng máy phân tích máu toàn phần – vốn dĩ thiết bị này không hề có năng lực phát hiện ra bóng dáng của tình trạng tán huyết.<sup>76</sup></p>
+
+    <p>Các phương thức xét nghiệm được tín nhiệm nhất để đo lường kali là bộ xét nghiệm sinh hóa cơ bản (basic metabolic panel) hoặc xét nghiệm chuyển hóa toàn diện (comprehensive metabolic panel). Chúng được thực thi trên các mẫu huyết thanh hoặc huyết tương đã qua xử lý chuẩn mực tại phòng thí nghiệm trung tâm. Một điểm nghẽn chí tử là quá trình xử lý và luân chuyển mẫu có thể kéo lê thời gian chờ kết quả. Để bảo chứng độ chính xác tuyệt đối, bất cứ khi nào phòng lab báo cáo có hiện tượng tán huyết, bệnh nhân cần được lấy lại ngay một mẫu huyết thanh hoặc huyết tương mới.<sup>67 75</sup></p>
+
+<figure style="margin: 2rem auto;">
+    <img src="https://file.garden/aRcee0oeuCLsBw6X/jbm-2026-hyperkalemia/04.jpg" alt="Thuật toán quản lý điều trị tăng kali máu">
+    <figcaption class="image-caption">
+        <strong>Hình 4. Thuật toán quản lý điều trị tăng kali máu.<sup>1,5,6,59,77</sup></strong> 
+        <span style="color: #707070; font-style: italic;">
+            <strong>ECG:</strong> điện tâm đồ; <strong>RAAS:</strong> hệ renin-angiotensin-aldosterone; <strong>SPS:</strong> natri polystyrene sulfonate; <strong>SZC:</strong> natri zirconium cyclosilicate.
+        </span>
+    </figcaption>
+</figure>
+
+    <h2>10. Quản lý tình trạng tăng kali máu</h2>
+    <p>Đối với những bệnh nhân mang trong mình chứng tăng kali máu mà thể trạng lâm sàng đang biểu hiện bất ổn hoặc kèm theo tổn thương thận cấp tính, một chiến lược tác chiến gồm ba bước, dựa trên thời gian khởi phát tác dụng tương đối của thuốc, được khuyến cáo mạnh mẽ nhằm dập tắt các di chứng (Hình 4).<sup>4</sup> Trọng trách đầu tiên trong chuỗi hành động này là khôi phục lại hệ thống dẫn truyền của tim thông qua các kênh lệ thuộc canxi. Các hướng dẫn lâm sàng đồng loạt lên tiếng hối thúc bước này phải được kích hoạt chớp nhoáng nếu bệnh nhân đang rơi vào vòng xoáy rối loạn huyết động hoặc đứng trước lằn ranh tử thần (ví dụ: kali huyết thanh \(>6,5\) mmol/L).<sup>4 5 7 49 77</sup> Bước 1 sẽ được đặc cách miễn trừ nếu tăng kali máu chưa chạm ngưỡng cấp cứu sinh tử. Bước 2 nhận lãnh nhiệm vụ hối thúc ion kali chui tọt vào bên trong tế bào, và được ưu tiên ngay tắp lự sau khi đã hoàn tất việc bơm canxi. Chốt chặn cuối cùng (Bước 3) là việc dọn dẹp và tống khứ lượng kali thừa mứa ra khỏi cơ thể thông qua các vũ khí dược lý (Bước 3a; ví dụ: các chất gắn kết kali) hoặc nhờ cậy đến các liệu pháp thay thế thận (Bước 3b). Phần tiếp theo sẽ mổ xẻ chi tiết các loại vũ khí được tung ra trong từng giai đoạn. Tuy nhiên, xin được khắc cốt ghi tâm rằng nghệ thuật quản lý tăng kali máu là một bài toán hóc búa và đòi hỏi sự linh hoạt tuyệt đối: phác đồ phải được đo ni đóng giày cho từng bệnh nhân dựa trên bức tranh lâm sàng (ví dụ: các gợn sóng bất thường trên ECG, tình trạng đường truyền tĩnh mạch, thể tích tuần hoàn, chức năng thận, và thăng bằng axit-bazơ) cũng như tiềm lực thực tế của cơ sở y tế (ví dụ: khả năng tiếp cận máy chạy thận nhân tạo khẩn cấp). Thêm vào đó, dù cho đã có vô vàn nghiên cứu đưa các phác đồ điều trị tăng kali máu lên bàn cân, việc diễn giải các kết quả vẫn vấp phải rào cản lớn do sự thiếu đồng nhất trong quần thể bệnh nhân, bối cảnh lâm sàng, chiến thuật liều lượng, và thời điểm chốt sổ đánh giá kết quả.<sup>15 42 78</sup> Bảng 2 vẽ ra bức tranh toàn cảnh về tất cả các liệu pháp được áp dụng trong từng giai đoạn.</p>
+
+    <div class="table-wrapper">
+        <table class="rec-table" style="width: 100%; font-size: 14px;">
+            <caption style="text-align: center; font-weight: bold; margin-bottom: 8px; font-size: 16px;">
+                Bảng 2: Tóm tắt các loại thuốc điều trị tăng kali máu<sup>5,15,77,99,101,113,140</sup>
+            </caption>
+            <thead>
+                <tr>
+                    <th style="width: 18%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Thuốc</th>
+                    <th style="width: 25%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Liều khởi đầu</th>
+                    <th style="width: 18%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Dược động học</th>
+                    <th style="width: 14%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Mức giảm Kali</th>
+                    <th style="width: 25%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Ghi chú lâm sàng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; text-align: left; padding: 6px 12px;">
+                        Bước 1: Phục hồi dẫn truyền tim (Ổn định màng tế bào)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Canxi gluconat 10%</strong></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">1–2 g (10–20 mL) tiêm TM trong 2–5 phút HOẶC 3 g (30 mL) tiêm TM trong 10 phút</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Khởi phát: 3 phút<br>Kéo dài: 30–60 phút</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">Không có</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Lặp lại liều sau 5–10 phút nếu ECG không bình thường hóa.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Canxi clorua 10%</strong></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">1 g (10 mL) tiêm TM trong 2–5 phút</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Khởi phát: 3 phút<br>Kéo dài: 30–60 phút</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">Không có</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Ưu tiên đường TM trung tâm; ưu tiên sử dụng trong bối cảnh ngừng tim.</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; text-align: left; padding: 6px 12px;">
+                        Bước 2: Chuyển dịch kali vào nội bào
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Insulin thường</strong><br><small>(kèm Dextrose)</small></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">
+                        <strong>Insulin:</strong> 5–10 đơn vị HOẶC 0,1 đv/kg (tối đa 10 đv) tiêm TM trực tiếp.<br>
+                        <strong>Dextrose:</strong> 25–50 g (khuyến cáo loại 10%) tiêm TM nhanh hoặc truyền liên tục.
+                    </td>
+                    <td style="vertical-align: top; padding: 8px 10px;">
+                        Khởi phát: &lt; 15 phút<br>
+                        Kéo dài: 2 giờ (Insulin), 1 giờ (Dextrose)
+                    </td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">0,6 – 1,4 mmol/L</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Theo dõi ĐH mỗi 30–60 phút trong \(\ge 4\) giờ. Liều 5 đv thích hợp cho CKD, AKI, cân nặng &lt; 50 kg hoặc ĐH ban đầu &lt; 7 mmol/L (&lt; 126 mg/dL).</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Salbutamol</strong><br><small>(Albuterol)</small></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">10–20 mg dạng khí dung HOẶC 4–6 nhát xịt (MDI)</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Khởi phát: &lt; 30 phút<br>Kéo dài: 2 giờ</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">0,65 – 1,0 mmol/L</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Có thể kém hiệu quả hơn ở bệnh nhân bệnh thận giai đoạn cuối.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Natri bicarbonat</strong></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">50 mmol tiêm TM nhanh HOẶC 50–150 mmol truyền TM trong nhiều giờ</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Biến thiên</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">Không đáng kể</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Thường không khuyến cáo thường quy; chỉ cân nhắc khi có kèm toan chuyển hóa nặng.</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; text-align: left; padding: 6px 12px;">
+                        Bước 3a: Đào thải kali ra khỏi cơ thể
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Lợi tiểu quai</strong><br><small>(Furosemide, Bumetanide)</small></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Furosemide: 20–80 mg tiêm TM;<br>Bumetanide: 0,5–2 mg tiêm TM</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Khởi phát: 30–60 phút<br>Kéo dài: 2–3 giờ</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">~ 0,3 mmol/L</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Cần liều cao hơn nếu suy giảm chức năng thận hoặc đã dùng lợi tiểu trước đó.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Natri polystyrene sulfonate (SPS)</strong></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">15 g đường uống HOẶC 30 g đặt trực tràng</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Khởi phát: 1 giờ<br>Kéo dài: 4–12 giờ</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">Biến thiên</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Không khuyến cáo thường quy cấp cứu. Dùng cách xa thuốc uống khác 2–3 giờ.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Patiromer</strong></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">8,4 – 25,2 g đường uống</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Khởi phát: 2–7 giờ</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">0,4 – 0,6 mmol/L</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Dùng cách xa các loại thuốc uống khác 2–3 giờ để tránh cản trở hấp thu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px 10px;"><strong>Natri zirconium cyclosilicate (SZC)</strong></td>
+                    <td style="vertical-align: top; padding: 8px 10px;">10 g đường uống (tối đa 30 g/ngày)</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Khởi phát: 1 giờ<br>Kéo dài: 4–12 giờ</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px 10px;">0,1 – 0,7 mmol/L</td>
+                    <td style="vertical-align: top; padding: 8px 10px;">Dùng cách xa các thuốc đường uống khác 2–3 giờ để phòng ngừa tương tác.</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="font-size: 13px; color: #4a4a4a; text-align: justify; padding: 10px 15px; background-color: #f9f9f9; border-left: 4px solid #c0c0c0; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; line-height: 1.5;">
+                        <strong>Chú thích:</strong> AKI: Tổn thương thận cấp; CKD: Bệnh thận mạn tính; ĐH: Đường huyết; ECG: Điện tâm đồ; MDI: Bình xịt định liều; TM: Tĩnh mạch.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <h3>Phục hồi dẫn truyền tim (Bước 1)</h3>
+    <p>Nhiệm vụ phục hồi dẫn truyền cơ tim được giao phó cho việc tiêm tĩnh mạch canxi.<sup>79</sup> Trong quá khứ, giới y khoa từng đinh ninh rằng canxi khôi phục dẫn truyền bằng cách thiết lập lại điện thế màng lúc nghỉ; tuy nhiên, một nghiên cứu gần đây trên tế bào cơ tim chó đã vạch ra rằng canxi thực chất khôi phục tính dẫn truyền thông qua sự lan truyền điện thế phụ thuộc canxi.<sup>80</sup> Phát hiện này mang theo những ngụ ý sâu sắc trong việc thấu hiểu vai trò cốt lõi của canxi trong điều trị tăng kali máu, qua đó lý giải lợi ích tiềm tàng của nó ở những bệnh nhân có dấu hiệu chậm dẫn truyền (tức là phức bộ QRS giãn rộng) nhưng lại bất lực trước các bất thường liên quan đến sóng T.<sup>81</sup></p>
+
+    <p>Các khuyến cáo đồng thuận và hướng dẫn y khoa đều khẳng định như đinh đóng cột rằng canxi phải được trao ngay cho những bệnh nhân tăng kali máu có kèm biến đổi trên ECG.<sup>4 49 77</sup> Canxi có thể được giữ lại, không cần phải tiêm ở những bệnh nhân hoàn toàn không có sóng gợn bất thường trên ECG cũng như ở các trường hợp tăng kali máu mức độ nhẹ (kali \(<6\) mmol/L).<sup>4</sup> Tuy nhiên, giới học thuật vẫn đang chia rẽ sâu sắc về việc có nên bung vũ khí canxi cho những bệnh nhân sở hữu mức kali \(>6\) mmol/L nhưng ECG lại phẳng lặng không biến đổi hay không. Bản tóm tắt các khuyến cáo từ hội nghị KDIGO về quản lý tăng kali máu cấp tính tại khoa cấp cứu đã bật đèn xanh cho việc tiêm canxi ở <em>tất cả</em> những bệnh nhân có mức kali \(>6,5\) mmol/L mà chưa thể tiếp cận ngay lập tức với máy đo ECG.<sup>49</sup> Trong thực tế chiến đấu trên lâm sàng, chúng ta hiếm khi nào nắm được kết quả nồng độ kali trước khi máy ECG được kéo tới giường bệnh, nhưng nếu rơi vào tình thế đó, việc tiêm canxi phủ đầu là một quyết định hoàn toàn hợp lý.</p>
+    
+    <p>Hiện tại, có hai loại muối canxi tiêm tĩnh mạch được trọng dụng thường xuyên: clorua (chloride) và gluconat (gluconate). Canxi clorua sở hữu hàm lượng canxi nguyên tố đậm đặc gấp ba lần canxi gluconat (với mỗi 1 g: tương đương 6,8 mmol/10 mL hay 273 mg canxi nguyên tố ở dạng clorua, so với 2,3 mmol/10 mL hay 93 mg canxi nguyên tố ở dạng gluconat).<sup>82</sup> Những dữ liệu chất lượng cao nhằm dẫn đường cho việc định liều canxi vẫn còn khá nghèo nàn. Hiệp hội Thận học Vương quốc Anh (UK Kidney Association) đưa ra lời khuyên sử dụng mức liều 3 g đối với canxi gluconat, trong khi nhiều tổ chức khác lại khuyến nghị mức 1-2 g hoặc thậm chí bỏ ngỏ không chỉ định liều cụ thể.<sup>1 4 6 7</sup> Nền tảng của các chỉ dẫn này bắt nguồn từ một nghiên cứu quan sát, tiến cứu trên 111 bệnh nhân được truyền canxi gluconat để trị chứng tăng kali máu có biến đổi ECG. Kết quả phơi bày rằng \(97\%\) trong số họ phải cần tới ba liều 1 g, và phác đồ chỉ xài liều duy nhất 1 g hoàn toàn vô dụng trên tất cả các bệnh nhân.<sup>81</sup></p>
+
+    <p>Mang trong mình áp lực thẩm thấu cao hơn hẳn và khả năng gây kích ứng dữ dội, canxi clorua có thể gieo rắc thảm họa hoại tử mô nếu bị thoát mạch; vì thế, thanh gươm này nhìn chung chỉ nên được rút ra và truyền qua đường tĩnh mạch trung tâm hoặc trong các tình huống ngừng tim. Một nghiên cứu hồi cứu gần đây phân tích 72 ca truyền ngoại vi dung dịch canxi clorua 10% đã chứng minh một hồ sơ an toàn chấp nhận được, khi chỉ có \(6\%\) số bệnh nhân gặp phải phản ứng tại chỗ truyền, và tuyệt nhiên không một ai bị tổn thương mô vĩnh viễn.<sup>83</sup> Cho đến khi có những bằng chứng đanh thép hơn, canxi clorua vẫn được ưu ái truyền qua đường tiếp cận trung tâm, dẫu cho trong các khoảnh khắc sinh tử, việc truyền nó qua các tĩnh mạch ngoại biên khẩu kính lớn vẫn là một nước đi đáng để cân nhắc. Những tác dụng không mong muốn khác có thể bắt gặp với bất kỳ loại muối canxi nào bao gồm hạ huyết áp, giãn mạch ngoại vi, nhịp tim chậm, và các rối loạn nhịp tim – những biến cố này dường như chịu sự chi phối chặt chẽ của liều lượng và tốc độ tiêm.<sup>4 84</sup> Thêm vào đó, quan niệm cũ kỹ cho rằng canxi gluconat phải ghé qua gan để kích hoạt mới phát huy tác dụng lâm sàng giờ đây đã bị bác bỏ hoàn toàn.<sup>85</sup> Bất chấp những sự khác biệt trên, cả hai dòng muối canxi đều đã chứng tỏ được độ hiệu quả tương đương nhau trên chiến trường lâm sàng.<sup>85 86</sup></p>
+    
+    <p>Do sự vắng bóng của các thử nghiệm lâm sàng tiến cứu, chất lượng cao nhằm đặt các công thức muối canxi, chiến thuật phân liều, hay thời điểm vàng để tiêm thuốc trong phác đồ quản lý tăng kali máu lên bàn cân, mọi khuyến cáo hiện thời chủ yếu dựa dẫm vào dữ liệu quan sát và tiếng nói của các chuyên gia.<sup>4 49 77 87</sup> Mặc cho điểm yếu cố hữu này, canxi tĩnh mạch vẫn chễm chệ ở vị trí trụ cột vững chắc của quá trình điều trị. Trong một nghiên cứu quan sát tiến cứu, đa trung tâm thu nhận 203 bệnh nhân tăng kali máu, có đến \(55\%\) trong số đó được truyền canxi tĩnh mạch.<sup>15</sup> Giới y khoa vẫn đang mỏi mắt ngóng chờ những bằng chứng thép để soi sáng thêm về mức liều lý tưởng cũng như vai trò chính xác của canxi trong các tình huống đặc biệt như tăng kali máu chỉ biểu hiện duy nhất bất thường ở sóng T. Từng có những lời rỉ tai lo ngại rằng canxi có thể châm ngòi cho chứng rối loạn nhịp thất khi bệnh nhân đang ngộ độc digoxin (một bối cảnh thường đi kèm với tăng kali máu). Dẫu vậy, một nghiên cứu đoàn hệ hồi cứu trên 161 bệnh nhân ngộ độc digoxin đã dập tắt nỗi sợ này, khẳng định việc bơm canxi hoàn toàn không liên đới gì đến sự gia tăng nhịp tim bất thường hay tỷ lệ tử vong.<sup>88</sup> Lời cuối cùng cần khắc cốt ghi tâm: mặc dù được tung ra hỏa tốc nhằm bình ổn các dấu hiệu ECG, canxi tĩnh mạch hoàn toàn bất lực trong việc kéo giảm nồng độ kali. Ngay sau khi tiêm canxi, toàn bộ mặt trận phải lập tức chuyển hướng sang mục tiêu lùa ion kali chạy vào bên trong tế bào.</p>
+
+    <div class="info-box">
+        <strong>Tóm lược Bước 1:</strong>
+        <p>Bước 1 trong công cuộc đối phó với tăng kali máu yêu cầu phải tiêm truyền canxi tĩnh mạch thần tốc, bởi vũ khí này giúp khôi phục nhanh chóng khả năng dẫn truyền của tim và giáng một đòn chí mạng vào nguy cơ rối loạn nhịp, đặc biệt hiệu quả ở nhóm bệnh nhân đã phơi bày các bằng chứng chậm dẫn truyền (ví dụ: QRS giãn rộng trên ECG). Các kim chỉ nam hiện tại đồng thanh khuyến cáo canxi tĩnh mạch cho đối tượng tăng kali máu kèm biến đổi ECG, đồng thời bật đèn xanh cho việc điều trị bao vây kinh nghiệm nếu mức kali \(>6,5\) mmol/L trong bối cảnh việc đo ECG bị chậm trễ. Canxi gluconat thường được ưu tiên hơn cho đường truyền ngoại biên nhờ rủi ro tổn thương mô thấp hơn. Vì canxi không có mảy may tác dụng nào trong việc dìm nồng độ kali huyết thanh xuống, nó phải được nối gót ngay tức khắc bằng các liệu pháp chuyển dịch kali vào nội bào và đào thải kali ra khỏi cơ thể.</p>
+    </div>
+
+    <h3>Sự chuyển dịch kali vào nội bào (Bước 2)</h3>
+    <p>Chặng thứ hai của phác đồ quản lý chính là kích hoạt sự dịch chuyển của kali vào bên trong tế bào. Các phương án tác chiến bao gồm insulin kết hợp với dextrose, thuốc đồng vận beta, và natri bicarbonat. Những mũi nhọn này sẽ nhanh chóng đè bẹp nồng độ kali huyết thanh bằng cách thúc đẩy tế bào háu đói nuốt trọn kali vào trong, cung cấp một sự hạ nhiệt tạm thời trong lúc mòn mỏi chờ đợi các chiến lược đào thải triệt để được khởi động.<sup>5 49</sup></p>
+
+    <h4>Insulin</h4>
+    <p>Insulin hạ bệ nồng độ kali huyết thanh thông qua việc đánh thức hoạt động của bơm \( \text{Na}^+/\text{K}^+\text{-ATPase} \), kích hoạt một làn sóng di tản kali vào nội bào chỉ trong vòng vài phút và kéo giảm mức kali huyết thanh xuống chừng 0,6-1,4 mmol/L. Tác dụng này kéo dài vắt qua vài giờ đồng hồ, dẫu cho cơn ác mộng tăng kali máu dội ngược (rebound) vẫn có nguy cơ rình rập.<sup>89 90</sup> Trong quá khứ, phác đồ tiêu chuẩn thường là tiêm tĩnh mạch 10-20 đơn vị insulin thường (regular insulin) sát cánh cùng dextrose để cản bước nguy cơ hạ đường huyết.<sup>49</sup> Tuy nhiên, những làn sóng bằng chứng mới nổi từ các nghiên cứu đoàn hệ hồi cứu đang vạch ra một hướng đi khác: chỉ 5-10 đơn vị insulin thường tĩnh mạch là đã đủ sức nặng để giáng đòn lên nồng độ kali, lại đi kèm với ít rủi ro đánh tụt đường huyết hơn, đặc biệt ưu việt ở những bệnh nhân mắc bệnh lý về thận.<sup>91 92</sup></p>
+
+    <p>Nhiều nghiên cứu đã đặt lên bàn cân so sánh giữa mức liều 5 đơn vị (hoặc liều hiệu chỉnh theo cân nặng 0,1 đơn vị/kg) với phác đồ 10 đơn vị insulin thường tĩnh mạch truyền thống. Một bản phân tích gộp (meta-analysis) xâu chuỗi 10 nghiên cứu đoàn hệ hồi cứu (n = 3437) đã gióng lên hồi chuông kết luận: liều thấp giúp cắt giảm rõ rệt tỷ lệ hạ đường huyết (tỷ số chênh [odds ratio] 0,55, KTC 95% từ 0,43 đến 0,69) trong khi uy lực giảm kali huyết thanh lại chẳng hề thua kém (độ chênh lệch trung bình [mean difference] -0,02 mmol/L, KTC 95% từ -0,11 đến 0,07) khi đặt cạnh liều 10 đơn vị.<sup>93</sup> Dẫu vậy, hai nghiên cứu đoàn hệ hồi cứu sinh sau đẻ muộn lại ném ra những kết quả trái chiều về sức mạnh hạ kali của các mức liều, gián tiếp xoáy sâu vào sự thiết yếu của việc triển khai các nghiên cứu tiến cứu nhằm định vị chiến thuật kê liều insulin tối ưu nhất.<sup>94 95</sup> Các loại insulin tác dụng nhanh (ví dụ: lispro) cũng đã được đưa vào tầm ngắm, với một thử nghiệm hồi cứu trên 237 bệnh nhân ghi nhận uy lực dìm kali mạnh mẽ hơn, nhưng đi kèm cái giá phải trả là nguy cơ hạ đường huyết cao hơn.<sup>96</sup> Về mặt lý thuyết, dược động học của các loại insulin này khi tiêm tĩnh mạch được kỳ vọng là khá tương đồng, bởi những ranh giới phân biệt giữa các công thức insulin chủ yếu được vẽ ra dựa trên biên dạng hấp thu (absorption profiles) khi tiêm dưới da.<sup>97</sup></p>
+
+    <p>Bất chấp việc sử dụng công thức insulin nào đi chăng nữa, cơn bão hạ đường huyết vẫn sừng sững là tác dụng phụ đáng gờm nhất đòi hỏi phải có chiến lược phòng thủ chủ động. Một bài tổng quan bao trùm (scoping review) cày xới qua 62 nghiên cứu đã lật tẩy một sự thật phũ phàng: biến chứng hạ đường huyết càn quét qua \(17,2\%\) số bệnh nhân nội trú đang nhận insulin để trị tăng kali máu.<sup>98</sup> Các yếu tố rước hiểm họa này vào thân bao gồm: bệnh thận mạn tính (CKD), tổn thương thận cấp tính, không mang tiền sử đái tháo đường, mức đường huyết trước điều trị thấp, thể trạng nhẹ cân, hoặc phải gánh mức liều insulin \( \ge 10 \) đơn vị, hay liều dextrose vỏn vẹn \( \le 25 \) g.<sup>4 92 99 100</sup></p>
+
+    <h4>Dextrose</h4>
+    <p>Dextrose tĩnh mạch thường được khoác tay cùng insulin lên vũ đài nhằm chặn đứng cơn tụt đường huyết, có thể tiêm bolus hoặc truyền liên tục, với những nồng độ thiên hình vạn trạng được áp dụng trong thực tiễn (ví dụ: 5%, 10%, 20% hay 50%). Những bình truyền nồng độ loãng (5%) có thể vô tình nhận chìm bệnh nhân trong tình trạng quá tải dịch, trong khi các chế phẩm ưu trương chót vót (50%) lại có thể đổ thêm dầu vào lửa cho chứng tăng kali máu, bởi hiệu ứng áp lực thẩm thấu sẽ thẳng tay kéo giật kali từ bên trong ra ngoài khoảng gian bào, hoặc gieo rắc thảm họa hoại tử mô nếu bị thoát mạch.<sup>4 27</sup> Thêm vào đó, việc kè kè theo dõi đường huyết sát sao là một nhiệm vụ sống còn bởi vòng đời tác dụng của dextrose vốn ngắn ngủi hơn nhiều so với insulin (khoảng một giờ so với hai giờ của insulin).<sup>101</sup> Một mức đường huyết đo được trước điều trị lơ lửng dưới ngưỡng 7 mmol/L (&lt; 126 mg/dL) chính là hồi chuông báo động đỏ về nguy cơ hạ đường huyết do điều trị (iatrogenic hypoglycaemia).<sup>4</sup> Để không phải ngậm đắng nuốt cay vì sự chậm trễ trong việc bơm dextrose, một y lệnh dự phòng dextrose "khi cần" (PRN) có thể được cài cắm sẵn vào trong các phác đồ chuẩn trị tăng kali máu. Một vài nghiên cứu đã thử liều lĩnh khám phá hướng tiếp cận "chỉ dùng dextrose đơn độc" nhằm đánh thức khả năng tự tiết insulin của cơ thể, đặc biệt là ở những bệnh nhân chưa từng vướng vào đái tháo đường.<sup>102</sup> Một nghiên cứu bắt chéo ngẫu nhiên (randomised crossover) với quy mô nhỏ bé đã ghi nhận một mức giảm kali khiêm tốn (0,50 ± 0,31 mmol/L) ở 10 bệnh nhân chỉ tiếp nhận dextrose; con số này hoàn toàn lép vế nếu đặt cạnh thành tích đạt được của bộ đôi hoàn hảo insulin và dextrose (0,83 ± 0,53 mmol/L).<sup>102</sup> Chung quy lại, những bằng chứng có sẵn từ các cuộc khảo sát hồi cứu đều ám chỉ rằng phương pháp này chỉ đóng một vai trò cực kỳ hạn hẹp, bởi phản ứng giải phóng insulin nội sinh sau khi bơm dextrose vốn mang tính đỏ đen khó đoán và hoàn toàn có thể bị bóp nghẹt ở những bệnh nhân mang khiếm khuyết về chức năng thận, đang bị stress kích động, hoặc mắc đái tháo đường ở dạng tiềm ẩn.</p>
+
+    <h4>Thuốc đồng vận Beta (Beta agonists)</h4>
+    <p>Các thuốc đồng vận beta như salbutamol (albuterol) cũng xắn tay áo vào việc đẩy lùi kali vào nội bào thông qua việc kích hoạt bơm \( \text{Na}^+/\text{K}^+\text{-ATPase} \), và đã được tiến cử như một phương án dự phòng hay đánh san sẻ gánh nặng cùng với bộ đôi insulin-dextrose.<sup>4 49</sup> Salbutamol có thể thâm nhập vào cơ thể qua đường tĩnh mạch, dạng khí dung, hay qua bình xịt định liều; tất cả các cánh cửa này đều được công nhận là mang lại hiệu quả ngang ngửa nhau.<sup>87</sup> Khí dung hoặc hít salbutamol thường là lựa chọn được ái mộ nhất.<sup>77</sup> Uy lực của Salbutamol thể hiện tính lệ thuộc rất rõ vào liều lượng: mức liều 20 mg sẽ chém một nhát sâu hơn vào nồng độ kali huyết thanh so với mức liều 10 mg.<sup>4 5</sup> Sự hiện diện của Salbutamol đã được chứng minh là mang lại hiệu ứng hiệp đồng khi đứng chung chiến hào với insulin và dextrose. Trong một nghiên cứu bắt chéo trên 12 bệnh nhân đang chạy thận nhân tạo, phác đồ insulin-dextrose, salbutamol, và sự kết hợp của cả hai đã đánh tụt nồng độ kali huyết thanh lần lượt là 0,65, 0,66, và 1,21 mmol/L, một minh chứng sắc nét cho tác dụng cộng gộp này.<sup>103</sup> Một thử nghiệm đối chứng ngẫu nhiên đang ráo riết đặt các phác đồ này lên bàn cân và dự kiến sẽ hạ màn vào năm 2026.<sup>104</sup> Điểm trừ của thuốc đồng vận beta nằm ở các tác dụng phụ rắc rối như nhịp tim đập loạn xạ, run rẩy tay chân, và đau đầu như búa bổ do hậu quả của việc thụ thể beta bị kích thích. Uy lực của thuốc có thể bị thui chột ở những bệnh nhân mắc bệnh thận giai đoạn cuối hoặc những người đang ôm trọn liệu pháp chẹn beta không chọn lọc.<sup>4 103</sup></p>
+
+    <h4>Natri bicarbonat</h4>
+    <p>Thành tích của natri bicarbonat trong việc trấn áp nồng độ kali huyết thanh thường khá mờ nhạt và lúc tỏ lúc mờ. Cơ chế của nó là kích thích kali chạy vào nội bào thông qua việc gia tăng nguồn cung cấp natri và kiềm hóa môi trường, từ đó khích lệ hoạt động của cả bơm \( \text{Na}^+/\text{K}^+\text{-ATPase} \) lẫn cơ chế trao đổi \( \text{H}^+/\text{K}^+ \).<sup>77</sup> Các đòn hồi mã thương (tác dụng phụ) bao gồm tăng natri máu, nhiễm kiềm, và quá tải dịch. Việc truyền natri bicarbonat và canxi chung một đường truyền tĩnh mạch là điều tối kỵ bởi nó sẽ tạo ra kết tủa canxi carbonat (calcium carbonate), một cục máu đông vô hình có thể bít kín đường truyền và ngáng đường thuốc đi vào cơ thể.<sup>105</sup> Giải pháp là thiết lập một đường tĩnh mạch thứ hai hoặc rửa (flush) đường truyền cực kỳ cẩn thận giữa hai lần bơm thuốc. Một nghiên cứu quan sát trên 203 bệnh nhân tăng kali máu tại phòng cấp cứu tiết lộ rằng natri bicarbonat đã được xuất trận trong \(29\%\) số ca bệnh ở 4 giờ chăm sóc đầu tiên.<sup>15</sup> Một thử nghiệm trên 14 tình nguyện viên khỏe mạnh đã dội gáo nước lạnh vào niềm tin này khi chứng minh rằng natri bicarbonat hoàn toàn vô dụng trong việc hạ kali huyết thanh ở những người không mắc chứng nhiễm toan chuyển hóa.<sup>106</sup> Kể cả đối với bệnh nhân bị nhiễm toan chuyển hóa, lợi ích của natri bicarbonat cũng bị đặt một dấu hỏi to tướng bởi sự sụt giảm kali dường như chẳng mảy may liên quan đến sự thay đổi của độ pH huyết thanh. Hai thử nghiệm đối chứng ngẫu nhiên tiến cứu đã đánh giá vai trò của natri bicarbonat trong việc xử lý nhiễm toan chuyển hóa; tuy nhiên, trớ trêu thay, rất nhiều bệnh nhân trong số đó lại không hề bị tăng kali máu.<sup>107 108</sup> Do đó, bất kỳ tia hy vọng nào về lợi ích của natri bicarbonat rút ra từ các nghiên cứu này đều có khả năng chỉ là kết quả của việc giải quyết cái gốc rễ nhiễm toan chuyển hóa chứ hoàn toàn không phải là năng lực sửa chữa trực tiếp tình trạng tăng kali máu. Tính đến thời điểm hiện tại, bằng chứng ủng hộ việc sử dụng natri bicarbonat trong cấp cứu tăng kali máu (bất kể bệnh nhân có kèm theo toan chuyển hóa hay không) vẫn là một khoảng trống mênh mông.</p>
+
+    <div class="info-box">
+        <strong>Tóm lược Bước 2:</strong>
+        <p>Bước 2 của trận chiến quản lý tăng kali máu cung cấp một giải pháp chớp nhoáng nhưng chỉ mang tính chất cứu hỏa tạm thời trong khi các chiến lược đào thải triệt để được khởi động. Phác đồ insulin kết hợp dextrose vẫn là lựa chọn ưu tiên hàng đầu, với những bằng chứng mới nổi ủng hộ việc sử dụng liều insulin thấp hơn (5 đơn vị hoặc 0,1 đơn vị/kg) nhằm giảm thiểu rủi ro hạ đường huyết mà không làm suy giảm hiệu quả điều trị, mặc dù việc theo dõi đường huyết chặt chẽ vẫn là yêu cầu bắt buộc. Các thuốc đồng vận beta, chẳng hạn như salbutamol khí dung, mang lại hiệu quả hạ kali hiệp đồng và có thể được dùng như liệu pháp bổ trợ; trong khi đó, natri bicarbonate có bằng chứng hạn chế và thiếu nhất quán để sử dụng thường quy, ngoại trừ các trường hợp bệnh nhân chọn lọc bị toan chuyển hóa rõ rệt.</p>
+    </div>
+
+    
+    <h3>Tăng cường đào thải kali (Bước 3)</h3>
+
+    <p>Bước thứ ba và cũng là bước cuối cùng trong việc hạ nồng độ kali huyết thanh là tăng cường sự đào thải. Thuốc lợi tiểu quai, chẳng hạn như furosemide và bumetanide, ức chế kênh đồng vận chuyển natri-kali-chloride ở màng đỉnh của nhánh lên quai Henle.<sup>77</sup> Mặc dù phát huy hiệu quả trong việc quản lý và dự phòng tăng kali máu mạn tính, thuốc lợi tiểu quai lại hiếm khi được sử dụng trong các tình huống cấp cứu; một nghiên cứu quan sát trên thế giới thực ghi nhận tỷ lệ sử dụng chỉ ở mức 5% bệnh nhân.<sup>15</sup> Các bằng chứng ủng hộ vai trò của nhóm thuốc này trong tăng kali máu cấp tính còn rất hạn chế, và hiệu quả của chúng phụ thuộc vào chức năng thận còn bảo tồn cũng như tình trạng thể tích dịch, đi kèm với nguy cơ gây hại cho những bệnh nhân đang bị giảm thể tích hoặc có thể tích dịch bình thường.<sup>7, 49</sup> Dựa trên các y văn hiện có, liệu pháp này chỉ nên được chỉ định cho những bệnh nhân có tình trạng quá tải thể tích (ví dụ: suy tim mất bù cấp tính) và chức năng thận còn nguyên vẹn.</p>
+
+    <h4>Nhựa gắn kết (Binding resins)</h4>
+    <p>Các loại nhựa gắn kết như natri polystyrene sulfonate và canxi polystyrene sulfonate đã được sử dụng trong nhiều thập kỷ qua để điều trị tăng kali máu thông qua cơ chế trao đổi ion natri hoặc canxi lấy ion kali tại đường tiêu hóa, từ đó tăng cường đào thải kali qua phân.<sup>82, 109</sup> Bất chấp việc được sử dụng lâu đời trong lịch sử, những bằng chứng chứng minh hiệu quả của chúng trong điều trị tăng kali máu cấp tính vẫn còn nhiều mặt hạn chế.</p>
+    
+    <p>Một tổng quan hệ thống của Cochrane năm 2005 về các can thiệp cấp cứu đối với tình trạng tăng kali máu chỉ trích dẫn hai nghiên cứu không ngẫu nhiên từ những năm 1960, cho thấy sự sụt giảm nồng độ kali ở mốc 24 giờ.<sup>109, 110</sup> Một tổng quan hệ thống khác của Cochrane vào năm 2015, bao gồm bảy nghiên cứu trên 241 bệnh nhân, đã không thể đưa ra kết luận về natri và canxi polystyrene sulfonate do không có bất kỳ thử nghiệm lâm sàng ngẫu nhiên có đối chứng nào đánh giá các tác nhân này.<sup>87</sup> Các tác dụng phụ ghi nhận được bao gồm hạ kali máu, hạ magie máu, rối loạn tiêu hóa, và một biến chứng hiếm gặp nhưng có khả năng gây tử vong là hoại tử đại tràng.<sup>77, 111</sup> Thêm vào đó, những loại nhựa gắn kết kali này tiềm ẩn nguy cơ tương tác thuốc do làm cản trở quá trình hấp thu của các loại thuốc khác.</p>
+
+    <p>Các chất gắn kết kali thế hệ mới, bao gồm patiromer và natri zirconium cyclosilicate (SZC), đã xuất hiện với những dữ liệu thực tế thu thập từ các khoa cấp cứu, gợi ý về những lợi ích tiềm năng trong việc định hướng xử trí bệnh nhân và giảm tỷ lệ nhập viện.<sup>112</sup> Patiromer là một loại thuốc đường uống đã được phê duyệt để điều trị tình trạng tăng kali máu mạn tính.<sup>113</sup> Một nghiên cứu thuần tập hồi cứu trên nhóm bệnh nhân nội trú duy nhất (n=881) đã ghi nhận mức giảm kali là \( 0,50 \pm 0,56 \) mmol/L tại mốc sáu giờ.<sup>114</sup> Một thử nghiệm lâm sàng ngẫu nhiên thí điểm nhãn mở trên 30 bệnh nhân tại khoa cấp cứu đã phát hiện ra rằng, việc sử dụng patiromer 25,2 g kết hợp với chăm sóc tiêu chuẩn giúp làm giảm kali trong vòng hai giờ so với chỉ dùng chăm sóc tiêu chuẩn đơn thuần, mặc dù không ghi nhận sự khác biệt ở mốc sáu giờ.<sup>113</sup> Một nghiên cứu có quy mô lớn hơn đã được triển khai nhưng sau đó phải dừng sớm khi mới chỉ thu nhận được 144 bệnh nhân và kết quả vẫn chưa được công bố ngoại trừ dưới dạng tóm tắt (abstract).<sup>115, 116</sup></p>
+
+    <p>SZC là một chất trao đổi cation vô cơ không hấp thu, hoạt động bằng cách gắn kết với kali và amoni để trao đổi lấy các ion natri và hydro. Khả năng gắn kết kali của nó cao gấp chín lần so với natri polystyrene sulfonate.<sup>117</sup> Các tác dụng phụ bao gồm rối loạn tiêu hóa và phù nề.<sup>82</sup> Trong một nghiên cứu bệnh chứng gần đây trên 500 bệnh nhân, việc sử dụng SZC có liên quan đến việc giảm nhu cầu phải chạy thận nhân tạo cấp cứu so với các nhóm chứng lịch sử (tỷ số chênh OR 0,23, KTC 95% từ 0,17 đến 0,31).<sup>118</sup> Tuy nhiên, một thử nghiệm ngẫu nhiên thí điểm trên 70 bệnh nhân được dùng SZC hoặc giả dược kết hợp với insulin và dextrose lại không nhận thấy sự khác biệt về mức giảm kali ở thời điểm bốn giờ, mặc dù SZC có liên quan đến mức giảm kali mạnh hơn ở mốc hai giờ và giảm bớt nhu cầu sử dụng các phương pháp điều trị bổ sung ở mốc bốn giờ.<sup>119</sup> Gần đây, nhiều nghiên cứu hồi cứu đánh giá hiệu quả của SZC trong tình trạng tăng kali máu cấp cứu đã cho ra những kết quả trái chiều (Bảng 3). Hạn chế của những nghiên cứu này nằm ở thiết kế hồi cứu, sự không đồng nhất về liều lượng, các liệu pháp dược lý điều trị tăng kali máu dùng kèm, và đặc điểm quần thể bệnh nhân. Mặc dù vậy, liệu những lợi ích trên lý thuyết của SZC có thực sự hiện diện trong bối cảnh thế giới thực hay không vẫn là một câu hỏi cần được làm rõ.<sup>120-124</sup> Thật không may, một nghiên cứu tiến cứu so sánh giữa natri polystyrene sulfonate, SZC, patiromer, và giả dược đã bị chấm dứt sớm do kết quả tạm thời không cho thấy sự khác biệt nào giữa các nhóm.<sup>125, 126</sup> Cần có thêm nhiều nghiên cứu tiến cứu để xác định chính xác hiệu quả của patiromer và SZC trong điều trị tăng kali máu cấp cứu.</p>
+
+    <div class="table-wrapper">
+        <table class="rec-table" style="width: 100%; font-size: 14px;">
+            <caption style="text-align: center; font-weight: bold; margin-bottom: 8px; font-size: 16px;">
+                Bảng 3: Tóm tắt các nghiên cứu về natri zirconium cyclosilicate (SZC) trong điều trị tăng kali máu cấp cứu<sup>112, 120-124, 141-143</sup>
+            </caption>
+            <thead>
+                <tr>
+                    <th style="width: 14%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Tác giả chính, năm</th>
+                    <th style="width: 16%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Thiết kế nghiên cứu</th>
+                    <th style="width: 15%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Can thiệp bằng SZC</th>
+                    <th style="width: 15%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Nhóm đối chứng</th>
+                    <th style="width: 22%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Kết quả</th>
+                    <th style="width: 18%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Peacock, 2025</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thực nghiệm, ngẫu nhiên (n=70)</td>
+                    <td style="vertical-align: top; padding: 8px;">10 g (tối đa 3 liều)</td>
+                    <td style="vertical-align: top; padding: 8px;">Giả dược</td>
+                    <td style="vertical-align: top; padding: 8px;">Chênh lệch tuyệt đối mức giảm K⁺ tại 4 giờ: -0,13 mmol/L (KTC 95%: -0,44 đến 0,17)</td>
+                    <td style="vertical-align: top; padding: 8px;">Giảm K⁺ đáng kể tại 2 giờ: -0,35 mmol/L (KTC 95%: -0,68 đến -0,02)</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Grewal, 2025</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=101)</td>
+                    <td style="vertical-align: top; padding: 8px;">5–10 g</td>
+                    <td style="vertical-align: top; padding: 8px;">SPS 15–30 g</td>
+                    <td style="vertical-align: top; padding: 8px;">Thời gian trung vị để K⁺ bình thường (giờ): SZC 14 so với SPS 17 (P=0,26)</td>
+                    <td style="vertical-align: top; padding: 8px;">Giảm K⁺ đáng kể ở nhóm SZC tại thời điểm 2 và 8 giờ; bình thường hóa K⁺ tại 4 giờ đối với SZC</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Thai, 2025</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=46)</td>
+                    <td style="vertical-align: top; padding: 8px;">10–20 g (trung vị)</td>
+                    <td style="vertical-align: top; padding: 8px;">SPS 30–45 g (trung vị)</td>
+                    <td style="vertical-align: top; padding: 8px;">Thời gian trung vị để K⁺ bình thường (giờ): SZC 26,7 so với SPS 16,8 (P=0,24)</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px;">—</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Joyce, 2024</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=246)</td>
+                    <td style="vertical-align: top; padding: 8px;">5–15 g</td>
+                    <td style="vertical-align: top; padding: 8px;">SPS 15–30 g</td>
+                    <td style="vertical-align: top; padding: 8px;">Mức giảm K⁺ tại 24 giờ (mmol/L): SZC -0,78 ± 0,81; SPS -0,91 ± 0,76 (P=0,22)</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px;">—</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Yoo, 2023</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=260)</td>
+                    <td style="vertical-align: top; padding: 8px;">10 g</td>
+                    <td style="vertical-align: top; padding: 8px;">SPS 7,5–45 g</td>
+                    <td style="vertical-align: top; padding: 8px;">Mức giảm K⁺ trung bình (mmol/L): SZC -0,88 ± 0,64; SPS -0,75 ± 0,65 (P=0,09)</td>
+                    <td style="vertical-align: top; padding: 8px;">K⁺ được đánh giá lại trung bình 15 ± 8 giờ sau dùng thuốc</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Hasara, 2023</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=105)</td>
+                    <td style="vertical-align: top; padding: 8px;">10–20 g</td>
+                    <td style="vertical-align: top; padding: 8px;">SPS 15–60 g</td>
+                    <td style="vertical-align: top; padding: 8px;">Mức thay đổi K⁺ (mmol/L): SZC -1,1 ± 0,87; SPS -1,1 ± 0,62</td>
+                    <td style="vertical-align: top; padding: 8px;">Thời gian trung vị xét nghiệm lại K⁺ (phút): SZC 550; SPS 362</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Gasparovic, 2025</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=189)</td>
+                    <td style="vertical-align: top; padding: 8px;">Trong phác đồ điều trị</td>
+                    <td style="vertical-align: top; padding: 8px;">Phác đồ điều trị không-SZC</td>
+                    <td style="vertical-align: top; padding: 8px;">Mức giảm K⁺ tại 6 giờ (mmol/L): SZC -1,096 ± 0,71; Không-SZC -1,067 ± 0,6 (P=0,798)</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px;">—</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Sullivan, 2023</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=3903)</td>
+                    <td style="vertical-align: top; padding: 8px;">10 g (trung vị)</td>
+                    <td style="vertical-align: top; padding: 8px;">SPS 30 g (trung vị)</td>
+                    <td style="vertical-align: top; padding: 8px;">Giảm K⁺ trung bình ở mốc 4–24 giờ (mmol/L): SZC 0,78; SPS 0,96 (P &lt; 0,001)</td>
+                    <td style="vertical-align: top; padding: 8px;">Tỷ lệ hết tăng kali máu tại 24 giờ cao hơn ở SPS (74,9%) so với SZC (68,8%; P &lt; 0,001)</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Bower, 2025</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuần tập hồi cứu (n=75)</td>
+                    <td style="vertical-align: top; padding: 8px;">Đơn liều</td>
+                    <td style="vertical-align: top; padding: 8px;">SPS và Patiromer đơn liều</td>
+                    <td style="vertical-align: top; padding: 8px;">Giảm K⁺ tại 24 giờ (mmol/L): SZC -0,92 ± 0,85; SPS -1,16 ± 0,74; Patiromer -0,76 ± 0,63 (P &lt; 0,001)</td>
+                    <td style="vertical-align: top; text-align: center; padding: 8px;">—</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" style="font-size: 13px; color: #4a4a4a; text-align: justify; padding: 10px 15px; background-color: #f9f9f9; border-left: 4px solid #c0c0c0; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; line-height: 1.5;">
+                        <strong>Ghi chú:</strong> KTC: Khoảng tin cậy; SPS: Natri polystyrene sulfonate; SZC: Natri zirconium cyclosilicate.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <h4>Chạy thận nhân tạo (Haemodialysis)</h4>
+    <p>Chạy thận nhân tạo là chiến lược hiệu quả nhất để loại bỏ hoàn toàn kali khỏi cơ thể. Các hướng dẫn lâm sàng khuyến cáo nên khởi động phương pháp này ở những bệnh nhân tăng kali máu kháng trị với điều trị nội khoa, bệnh nhân mắc bệnh thận giai đoạn cuối vốn đang cần chạy thận nhân tạo định kỳ, hoặc tổn thương thận cấp tính ở mức độ nặng.<sup>4, 5, 7, 77</sup> Chạy thận nhân tạo có khả năng kéo giảm nồng độ kali huyết thanh xuống khoảng 1 mmol/L ngay trong giờ đầu tiên và lên tới 2 mmol/L trong vòng ba giờ, dẫu vậy hiện tượng tăng kali máu dội ngược (rebound) có thể xảy ra từ 1 đến 6 giờ sau đó, đòi hỏi phải liên tục theo dõi tình trạng bệnh.<sup>101</sup></p>
+    
+    <p>Tuy nhiên, hạn chế của phương pháp này là những đòi hỏi về thời gian và công tác hậu cần để bắt đầu chạy thận, đặc biệt là ở những bệnh nhân chưa từng lọc máu trước đây hoặc trong điều kiện nguồn lực y tế eo hẹp. Bên cạnh đó, các tác dụng phụ như tụt huyết áp, chuột rút, nhức đầu, buồn nôn, và nôn mửa cũng là những trở ngại đáng kể.<sup>77</sup> Đối với những bệnh nhân có huyết động không ổn định, có thể cần phải áp dụng các liệu pháp thay thế thận liên tục dù hiệu suất thấp hơn. Trong trường hợp không có sẵn máy chạy thận nhân tạo hoặc không khả thi để thực hiện, lọc màng bụng cấp cứu là một giải pháp thay thế. Một nghiên cứu thuần tập tiến cứu gần đây trên 82 bệnh nhân suy thận giai đoạn cuối chưa từng lọc máu trước đây bị tăng kali máu đã chỉ ra rằng, những bệnh nhân được lọc màng bụng có mức giảm kali tương đương với chạy thận nhân tạo vào ngày 1 và đạt mức độ ổn định tương tự vào các ngày từ 5-15.<sup>127</sup> Các liệu pháp điều trị tạm thời (như canxi tiêm tĩnh mạch, insulin kết hợp dextrose, và salbutamol) thường là vô cùng cần thiết trong thời gian chờ đợi khởi động liệu pháp thay thế thận, đặc biệt ở nhóm bệnh nhân có rối loạn nhịp tim hoặc mất ổn định huyết động.<sup>4</sup></p>
+
+    <div class="info-box">
+        <strong>Tóm lược Bước 3:</strong>
+        <p>Bước 3 trong phác đồ quản lý tăng kali máu mang đến giải pháp điều trị triệt để, mặc dù các bằng chứng hậu thuẫn cho chiến lược đào thải bằng dược lý (Bước 3a) trong bối cảnh cấp tính vẫn còn nhiều hạn chế. Việc sử dụng thuốc lợi tiểu quai có thể được cân nhắc đối với những bệnh nhân bị quá tải thể tích và chức năng thận còn bảo tồn, trong khi các chất gắn kết kali truyền thống như natri polystyrene sulfonate thường có tác dụng chậm, hiệu quả thiếu nhất quán, và đi kèm những tác dụng phụ nghiêm trọng trên đường tiêu hóa. SZC và patiromer cho thấy nhiều tiềm năng nhưng đòi hỏi phải có thêm những đánh giá tiến cứu sâu hơn. Chạy thận nhân tạo (Bước 3b) vẫn khẳng định vị thế là chiến lược đào thải hiệu quả nhất đối với tình trạng tăng kali máu nghiêm trọng hoặc kháng trị, đặc biệt ở bệnh nhân suy thận, có những bất thường dai dẳng trên điện tâm đồ, hoặc đáp ứng kém với các liệu pháp điều trị tạm thời.</p>
+    </div>
+
+    <h3>Tăng kali máu kháng trị (Refractory hyperkalaemia)</h3>
+    <p>Tình trạng tăng kali máu không đáp ứng (kháng trị) với các phương pháp điều trị tiêu chuẩn có thể đe dọa trực tiếp đến tính mạng, bắt buộc phải tiến hành chạy thận nhân tạo hoặc liệu pháp thay thế thận liên tục khẩn cấp như một phương án giải quyết dứt điểm. Lọc máu chính là phương pháp bài xuất kali tối ưu nhất, làm giảm nồng độ kali huyết thanh khoảng 1 mmol/L ngay trong giờ điều trị đầu tiên. Các hướng dẫn chỉ ra rằng cần xem xét chạy thận nhân tạo từ sớm đối với những bệnh nhân mắc bệnh thận mạn (CKD) giai đoạn tiến triển, tổn thương thận cấp thể thiểu niệu (ví dụ: lượng nước tiểu &lt; 400 mL trong 24 giờ), tăng kali máu kháng trị với điều trị nội khoa, hoặc tăng kali máu dẫn đến ngừng tim.<sup>77, 82</sup></p>
+
+    <h2>14. Cân nhắc trong các tình huống đặc biệt</h2>
+    
+    <h3>Tăng kali máu do thuốc</h3>
+    <p>Tình trạng tăng kali máu do thuốc gây ra đặt ra những thách thức lâm sàng to lớn trong quá trình quản lý bệnh nhân cả ở bối cảnh nội trú lẫn ngoại trú. Các loại thuốc có thể can thiệp vào quá trình cân bằng nội môi kali bằng cách thúc đẩy sự dịch chuyển kali qua màng tế bào, làm suy yếu khả năng bài tiết kali của thận, hoặc thông qua việc đưa lượng kali ngoại sinh vào cơ thể, thường xảy ra trên nền tảng bệnh nhân có tổn thương thận cấp.<sup>128</sup> Việc sụt giảm khả năng bài tiết kali của thận do ức chế hệ thống RAAS là cơ chế phổ biến nhất và quan trọng nhất giải thích cho việc các loại thuốc gây ra tăng kali máu. Một nghiên cứu quan sát quy mô lớn trên 194.456 bệnh nhân đang dùng thuốc hạ huyết áp đã báo cáo tỷ lệ mắc tăng kali máu (được định nghĩa là kali > 5 mmol/L) lên tới 10,8% trong suốt ba năm, phổ biến nhất ở những người đang sử dụng thuốc ức chế men chuyển angiotensin (ACEi).<sup>129</sup></p>
+    
+    <p>Dù nhận thức rõ nguy cơ này, các hướng dẫn của tổ chức KDIGO vẫn khuyến cáo không nên ngừng sử dụng các thuốc ức chế RAAS ở những bệnh nhân mắc CKD, trừ khi họ phát triển tình trạng tăng kali máu không thể kiểm soát mặc dù đã được điều trị nội khoa tích cực.<sup>7</sup> Quá trình xử trí ban đầu nên ưu tiên một cách tiếp cận theo từng bước, bao gồm việc hạn chế lượng kali nạp vào qua chế độ ăn, ngừng sử dụng các loại viên uống bổ sung kali dùng kèm, và bổ sung thêm thuốc lợi tiểu thải kali hoặc thuốc uống gắn kết kali (hoặc cả hai) nhằm tạo điều kiện duy trì việc sử dụng thuốc ức chế RAAS. Bảng 4 liệt kê các loại thuốc phổ biến dễ gây ra tình trạng tăng kali máu cùng với các chiến lược quản lý tiềm năng.<sup>128</sup></p>
+
+    <div class="table-wrapper">
+        <table class="rec-table" style="width: 100%; font-size: 14px;">
+            <caption style="text-align: center; font-weight: bold; margin-bottom: 8px; font-size: 16px;">
+                Bảng 4: Quản lý tăng kali máu do thuốc<sup>1, 7, 15, 50, 65, 128, 144-148</sup>
+            </caption>
+            <thead>
+                <tr>
+                    <th style="width: 16%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Nhóm thuốc</th>
+                    <th style="width: 20%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Cơ chế gây tăng kali máu</th>
+                    <th style="width: 18%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Quần thể nguy cơ cao</th>
+                    <th style="width: 20%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Dữ liệu lâm sàng</th>
+                    <th style="width: 26%; text-align: center; vertical-align: middle; padding: 8px 6px; background-color: #b30000; color: white;">Chiến lược quản lý</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Thuốc ức chế RAAS</strong><br><small>(ACEi, ARB)</small></td>
+                    <td style="vertical-align: top; padding: 8px;">Giảm aldosterone — dẫn đến giảm khả năng bài tiết K⁺ ở thận</td>
+                    <td style="vertical-align: top; padding: 8px;">CKD, người cao tuổi, đái tháo đường, suy tim, dùng chung thuốc tăng K⁺ khác</td>
+                    <td style="vertical-align: top; padding: 8px;">ACEi làm tăng nguy cơ tăng K⁺ trung bình cao hơn ARB (OR 1,26, KTC 95%: 1,02 đến 1,56)</td>
+                    <td style="vertical-align: top; padding: 8px;">Không ngừng thường quy (theo KDIGO) ở CKD trừ khi không kiểm soát được; hạn chế K⁺ chế độ ăn, ngừng bổ sung K⁺, thêm lợi tiểu hoặc thuốc gắn kết K⁺.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>NSAID</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Ức chế tổng hợp prostaglandin — làm giảm tiết renin và aldosterone</td>
+                    <td style="vertical-align: top; padding: 8px;">Người cao tuổi, CKD, đái tháo đường, bệnh tim mạch</td>
+                    <td style="vertical-align: top; padding: 8px;">16,7% phát triển tăng K⁺ hoặc tổn thương thận cấp ở người lớn tuổi nguy cơ cao</td>
+                    <td style="vertical-align: top; padding: 8px;">Ngừng NSAID; tăng cường bài tiết K⁺ bằng thuốc lợi tiểu hoặc thuốc gắn kết nếu kéo dài.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Ức chế Calcineurin</strong><br><small>(Tacrolimus, Ciclosporin)</small></td>
+                    <td style="vertical-align: top; padding: 8px;">Suy giảm hoạt động aldosterone, giảm cung cấp Na⁺; kích hoạt đồng vận chuyển Na⁺/Cl⁻</td>
+                    <td style="vertical-align: top; padding: 8px;">Tổn thương thận cấp, CKD</td>
+                    <td style="vertical-align: top; padding: 8px;">Tỷ lệ mắc dao động từ 10–73%; cao hơn với tacrolimus</td>
+                    <td style="vertical-align: top; padding: 8px;">Giảm liều nếu được; chế độ ăn ít K⁺, lợi tiểu thiazide, patiromer hoặc SZC; cân nhắc fludrocortisone liều thấp.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Lợi tiểu giữ kali</strong><br><small>(Spironolactone, Eplerenone, Amiloride)</small></td>
+                    <td style="vertical-align: top; padding: 8px;">Đối kháng Aldosterone hoặc chẹn kênh natri biểu mô (ENaC)</td>
+                    <td style="vertical-align: top; padding: 8px;">Người cao tuổi, suy tim, CKD, đang dùng ACEi/ARB</td>
+                    <td style="vertical-align: top; padding: 8px;">Làm tăng nguy cơ mắc tăng kali máu (OR 2,1, KTC 95%: 1,3 đến 3,3)</td>
+                    <td style="vertical-align: top; padding: 8px;">Đánh giá lại đơn thuốc, giảm liều hoặc tạm ngừng; dùng thuốc gắn kết K⁺ dài hạn và tư vấn dinh dưỡng.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Trimethoprim</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Chẹn kênh natri biểu mô (tác dụng giống amiloride)</td>
+                    <td style="vertical-align: top; padding: 8px;">CKD, điều trị liều cao</td>
+                    <td style="vertical-align: top; padding: 8px;">K⁺ &gt; 5,5 mmol/L chiếm khoảng 10%; thường khởi phát trong vòng 1 tuần</td>
+                    <td style="vertical-align: top; padding: 8px;">Ngừng thuốc; bù thể tích dịch; dùng lợi tiểu quai nếu bắt buộc phải tiếp tục sử dụng.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Succinylcholine</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Thuốc giãn cơ khử cực — làm K⁺ thoát ra ngoài tế bào ồ ạt</td>
+                    <td style="vertical-align: top; padding: 8px;">Bỏng, chấn thương dập nát, bất động, nhiễm trùng huyết</td>
+                    <td style="vertical-align: top; padding: 8px;">Tăng K⁺ nghiêm trọng từ 5–15 ngày sau bỏng/chấn thương; nguy cơ kéo dài nhiều tháng</td>
+                    <td style="vertical-align: top; padding: 8px;">Tránh dùng ở đối tượng nguy cơ; nếu ngừng tim: canxi TM, insulin, thuốc đồng vận beta.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Thuốc chẹn beta</strong><br><small>(đặc biệt không chọn lọc)</small></td>
+                    <td style="vertical-align: top; padding: 8px;">Giảm hấp thu K⁺ vào tế bào qua Na⁺/K⁺-ATPase; giảm tiết renin</td>
+                    <td style="vertical-align: top; padding: 8px;">Đái tháo đường, CKD, dùng kèm ức chế RAAS</td>
+                    <td style="vertical-align: top; padding: 8px;">Loại không chọn lọc làm tăng K⁺ nhiều hơn so với chọn lọc beta-1</td>
+                    <td style="vertical-align: top; padding: 8px;">Cân nhắc kỹ trước khi ngừng thuốc; hạn chế K⁺ ăn uống, dùng thuốc gắn kết, giảm liều.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding: 8px;"><strong>Digoxin</strong></td>
+                    <td style="vertical-align: top; padding: 8px;">Ức chế bơm Na⁺/K⁺-ATPase — đẩy K⁺ ra ngoại bào</td>
+                    <td style="vertical-align: top; padding: 8px;">CKD, tổn thương thận cấp, suy giáp, tương tác thuốc</td>
+                    <td style="vertical-align: top; padding: 8px;">Tăng kali máu là dấu hiệu cảnh báo ngộ độc mức độ nguy hiểm</td>
+                    <td style="vertical-align: top; padding: 8px;">Ngừng digoxin; dùng kháng thể kháng digoxin (Fab) nếu ngộ độc nặng; canxi TM, insulin-glucose; lọc máu.</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="font-size: 13px; color: #4a4a4a; text-align: justify; padding: 10px 15px; background-color: #f9f9f9; border-left: 4px solid #c0c0c0; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; line-height: 1.5;">
+                        <strong>Chú thích:</strong> ACEi: Thuốc ức chế men chuyển; ARB: Thuốc chẹn thụ thể angiotensin; CKD: Bệnh thận mạn tính; KTC: Khoảng tin cậy; NSAID: Thuốc kháng viêm không steroid; RAAS: Hệ renin-angiotensin-aldosterone.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <h3>Bệnh nhân mắc CKD hoặc bệnh thận giai đoạn cuối đang chạy thận nhân tạo</h3>
+    <p>Ở những bệnh nhân mắc CKD giai đoạn tiến triển, mức kali nền cao hơn thường được cơ thể dung nạp tốt do các cơ chế thích nghi mạn tính tại phần xa của nephron. Chính vì thế, các hướng dẫn của KDIGO năm 2024 đặc biệt nhấn mạnh vào bối cảnh lâm sàng thay vì chỉ nhìn vào các giá trị tuyệt đối.<sup>7</sup> Các ca tăng kali máu mức độ trung bình (kali > 6,0–6,4 mmol/L) nên được quản lý tại bệnh viện đối với những bệnh nhân đang trong tình trạng không khỏe hoặc có kèm theo tổn thương thận cấp; trong khi đó, tăng kali máu mức độ nặng (kali \(\ge 6,5\) mmol/L) được xem là một cấp cứu y khoa, đòi hỏi phải lập tức xác nhận lại nồng độ kali và theo dõi qua điện tâm đồ (ECG).<sup>7, 49</sup></p>
+    
+    <p>Đối với những bệnh nhân mắc bệnh thận giai đoạn cuối đang chạy thận nhân tạo, lọc máu vẫn đóng vai trò là nền tảng cốt lõi trong việc duy trì trạng thái cân bằng nội môi kali. Tuy nhiên, việc quản lý tình trạng tăng kali máu mạn tính trong khoảng thời gian giữa các phiên chạy thận nhân tạo có thể được củng cố bằng các loại thuốc uống gắn kết kali thế hệ mới (SZC, patiromer). Các tác nhân này đóng vai trò đặc biệt quan trọng vì chúng cho phép bệnh nhân suy thận giai đoạn cuối có thể tiếp tục sử dụng thuốc ức chế RAAS một cách an toàn.<sup>130</sup></p>
+
+    <h3>Ngừng tim (Cardiac arrest)</h3>
+    <p>Trong bối cảnh bệnh nhân bị ngừng tim mà nghi ngờ nguyên nhân là do tăng kali máu, các nỗ lực hồi sức cần phải tuân thủ chặt chẽ các hướng dẫn năm 2025 của Hội đồng Hồi sức Châu Âu (ERC) và Hiệp hội Tim mạch Hoa Kỳ (AHA) về hồi sức tim phổi. Những hướng dẫn này đặt ưu tiên cao nhất vào việc nhanh chóng ổn định cơ tim và dịch chuyển kali vào nội bào.<sup>1, 6</sup> Các phác đồ này mượn bằng chứng gián tiếp từ nhóm bệnh nhân không bị ngừng tim để lập luận rằng việc tiêm tĩnh mạch insulin và dextrose mang lại tác dụng hạ kali cho cả những trường hợp ngừng tim nghi do tăng kali máu.<sup>1, 6</sup> Tuy nhiên, các bác sĩ lâm sàng phải hết sức cảnh giác trong việc theo dõi tình trạng hạ đường huyết cả trong và sau khi thực hiện các nỗ lực hồi sức. Các thuốc đồng vận beta, nếu dùng ngoài phác đồ adrenaline (epinephrine) toàn thân tiêu chuẩn, sẽ không mang lại thêm bất kỳ lợi ích nào trong tình huống ngừng tim. Việc sử dụng natri bicarbonate chỉ được chỉ định cho các ca ngừng tim nghi do tăng kali máu có nền tảng là bệnh lý toan chuyển hóa từ trước.<sup>1, 6</sup></p>
+    
+    <p>Một thử nghiệm lâm sàng ngẫu nhiên có đối chứng gần đây trên 391 bệnh nhân bị ngừng tim ngoài bệnh viện không phân biệt nguyên nhân đã chỉ ra rằng việc sử dụng canxi không mang lại lợi ích gì, thậm chí còn phát ra tín hiệu về khả năng gây hại, do đó phương pháp này không được khuyến cáo.<sup>131</sup> Nghi ngờ nguyên nhân do tăng kali máu là một trong những tiêu chí loại trừ của nghiên cứu này. Phân tích phân nhóm cũng cho thấy những kết quả tương tự, ngay cả ở những bệnh nhân có biểu hiện biến đổi ECG nghi ngờ tăng kali máu. Nhìn chung, chúng ta cần có những thử nghiệm lâm sàng chất lượng cao để đánh giá chính xác lợi ích của việc sử dụng canxi theo kinh nghiệm trong quá trình hồi sức tim phổi ở những bệnh nhân nghi ngờ bị tăng kali máu.</p>
+
+    <h3>Phụ nữ có thai (Pregnancy)</h3>
+    <p>Xử trí cấp cứu được chỉ định trong các trường hợp tăng kali máu nghiêm trọng hoặc có những biến đổi trên ECG. Đặc biệt, phụ nữ mang thai mắc bệnh thận mạn (CKD) có nguy cơ cao khởi phát các rối loạn mất cân bằng điện giải, kéo theo rủi ro gánh chịu những kết cục bất lợi cho cả mẹ và thai nhi.<sup>132</sup> Thêm vào đó, các rối loạn tăng huyết áp trong thai kỳ như tiền sản giật cũng có khả năng làm tăng nguy cơ mắc chứng tăng kali máu.<sup>133</sup> Phương hướng quản lý phụ nữ có thai trong các tình huống cấp cứu diễn ra tương tự như với bệnh nhân không mang thai: tuân thủ một phác đồ đa phương thức tập trung vào việc dịch chuyển kali qua màng tế bào và tăng cường bài tiết kali, song song với việc chủ động định vị các nguyên nhân có thể đảo ngược được.</p>
+
+    <h3>Trẻ em (Children)</h3>
+    <p>Tại nhóm bệnh nhi, tình trạng tăng kali máu được xác định khi nồng độ kali huyết thanh vượt ngưỡng > 5,5 mmol/L.<sup>1</sup> Các yếu tố nguy cơ phổ biến dẫn đến tăng kali máu ở trẻ em có nhiều nét tương đồng với người lớn, mặc dù căn nguyên do thuốc ít có khả năng xảy ra hơn. Dẫu cho trẻ em mắc CKD cũng có nguy cơ phát triển những bất thường về kali y hệt như người lớn, nhưng một số trường hợp lại có biểu hiện hạ kali máu dai dẳng, nguyên nhân thường bắt nguồn từ các bệnh lý ống thận do di truyền hoặc mắc phải.<sup>7</sup> Quản lý chứng tăng kali máu ở trẻ em đòi hỏi bác sĩ phải thấu hiểu sâu sắc những khác biệt về mặt sinh lý học, và do đó quy trình này có thể mang nhiều sắc thái phức tạp hơn. Việc thiếu vắng dữ liệu từ các thử nghiệm lâm sàng bài bản khiến cho các chiến lược xử trí cấp cứu thường phải vay mượn và điều chỉnh từ các phác đồ dành cho người lớn, trong đó lưu ý việc tính toán liều lượng thuốc phải dựa trên cân nặng của trẻ.</p>
+
+    <h3>Các liệu pháp điều trị mới nổi (Emerging treatments)</h3>
+    <p>Các loại thuốc mới đang trong giai đoạn phát triển vẫn còn khá khan hiếm. Các dẫn xuất cyclophosphamide và các công nghệ polymer hiện đang trong giai đoạn nghiên cứu ban đầu nhằm khai thác khả năng gắn kết chọn lọc với kali tại đường tiêu hóa đi kèm với ít tác dụng phụ nhất có thể.<sup>134</sup> Trọng tâm của các chiến lược mới nổi trong việc giảm thiểu chứng tăng kali máu là cải thiện khả năng kiểm soát kali đồng thời vẫn cho phép bệnh nhân duy trì các loại thuốc thiết yếu vốn hay là thủ phạm kích hoạt tăng kali máu (ví dụ: thuốc ức chế RAAS, thuốc lợi tiểu giữ kali).<sup>135</sup> Cần lưu ý rằng, các loại thuốc ức chế RAAS khác nhau sẽ tạo ra những tác động khác nhau lên nồng độ kali.</p>
+    
+    <p>Lấy ví dụ, trong thử nghiệm lâm sàng ngẫu nhiên mù đôi PARADIGM-HF thực hiện trên 8.442 bệnh nhân suy tim phân độ II–IV kèm theo phân suất tống máu giảm, tỷ lệ mắc tình trạng tăng kali máu nghiêm trọng thấp hơn một cách đáng kể ở nhóm sử dụng sacubitril-valsartan khi đặt lên bàn cân với nhóm dùng enalapril (4,3% so với 5,6%, P=0,007).<sup>136</sup> Những kết quả tương tự cũng được tìm thấy khi so sánh giữa sacubitril-valsartan và valsartan đơn thuần trong khuôn khổ thử nghiệm ngẫu nhiên PARAGON-HF quy tụ 4.822 bệnh nhân suy tim có phân suất tống máu bảo tồn.<sup>137</sup> Sự xuất hiện của các thuốc ức chế kênh đồng vận chuyển natri-glucose 2 (SGLT2) có thể giúp giảm bớt rủi ro tăng kali máu trong khi vẫn mang lại những lợi ích bảo vệ to lớn cho hệ tim mạch và thận.<sup>138</sup></p>
+    
+    <p>Một phân tích gộp bao trùm 49.876 bệnh nhân tiểu đường tuýp 2 có nguy cơ tim mạch cao hoặc đang mắc CKD đã đi sâu phân tích tỷ lệ xuất hiện các ca tăng kali máu nghiêm trọng (kali huyết thanh \(\ge 6,0\) mmol/L) ở những bệnh nhân dùng thuốc ức chế SGLT2 so với nhóm dùng giả dược. Kết quả chỉ ra rằng nhóm thuốc ức chế SGLT2 đã làm giảm rõ rệt nguy cơ tăng kali máu nghiêm trọng (HR 0,84, KTC 95%: 0,76 đến 0,93). Điều này khẳng định ở những bệnh nhân mắc tiểu đường, thuốc ức chế SGLT2 có khả năng kéo giảm nguy cơ bị tăng kali máu trầm trọng.<sup>139</sup> Các phác đồ điều trị phối hợp đang mở ra nhiều hứa hẹn cho những bệnh nhân tăng kali máu phức tạp hoặc tái phát nhiều lần.</p>
+
+    <h2>15. Tổng hợp khuyến cáo từ các hướng dẫn lâm sàng</h2>
+    <p>Bảng 5 trình bày tóm tắt và đưa ra sự đối chiếu so sánh những khuyến cáo then chốt được trích lọc từ các hướng dẫn lớn của Châu Âu và Hoa Kỳ, cũng như các tuyên bố đồng thuận về mặt cấp tính trong khâu chẩn đoán và quản lý chứng tăng kali máu. Các tài liệu này được chắt lọc kỹ càng nhằm đem đến một khung định hướng và bộ cẩm nang thiết thực cho các bác sĩ lâm sàng hoạt động trên nhiều lĩnh vực khác nhau.</p>
+
+    <div class="table-wrapper">
+        <table class="rec-table" style="width: 100%; font-size: 14px;">
+            <caption style="text-align: center; font-weight: bold; margin-bottom: 8px; font-size: 16px;">
+                Bảng 5: Tóm tắt các khuyến cáo hướng dẫn về quản lý cấp tính tình trạng tăng kali máu<sup>1, 4-7, 59, 77, 124</sup>
+            </caption>
+            <thead>
+                <tr>
+                    <th style="width: 75%; text-align: center; vertical-align: middle; padding: 8px 10px; background-color: #b30000; color: white;">
+                        Hướng dẫn (Quần thể bệnh nhân mục tiêu) và các khuyến cáo
+                    </th>
+                    <th style="width: 25%; text-align: center; vertical-align: middle; padding: 8px 10px; background-color: #b30000; color: white;">
+                        Phân loại & Mức độ bằng chứng
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; padding: 6px 12px;">
+                        1. Hướng dẫn Thực hành Lâm sàng KDIGO 2024 về Đánh giá và Quản lý Bệnh Thận Mạn (CKD)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Cân nhắc giảm liều hoặc ngừng các thuốc ức chế RAAS trong trường hợp hạ huyết áp có triệu chứng hoặc tăng kali máu không kiểm soát được bất chấp các nỗ lực điều trị nội khoa.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Điểm thực hành</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Kết quả xét nghiệm kali có thể dao động do nhiều yếu tố như nhịp sinh học ngày đêm và mùa, mẫu huyết tương so với huyết thanh, và tác động của thuốc.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Điểm thực hành</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Quản lý dược lý không cấp cứu đối với tăng kali máu cần được định hướng dựa trên tính sẵn có của thuốc tại cơ sở y tế địa phương.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Điểm thực hành</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; padding: 6px 12px;">
+                        2. Tăng kali máu cấp tính tại khoa cấp cứu: Tóm tắt từ Hội nghị KDIGO
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Khuyến cáo đo ECG để đánh giá sự hiện diện của các biến đổi do tăng kali máu gây ra.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Gợi ý đồng thuận</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Nhanh chóng xác định nồng độ kali bằng xét nghiệm tại chỗ (POC), theo sau bởi xét nghiệm khẳng định tại phòng xét nghiệm trung tâm.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Gợi ý đồng thuận</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Theo dõi tim mạch liên tục và đo ECG 12 chuyển đạo đối với các trường hợp nồng độ kali &gt; 6,0 mmol/L.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Gợi ý đồng thuận</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;"><strong>Ổn định màng:</strong> Muối canxi TM tiêm ngay cho bệnh nhân có biến đổi ECG. Nếu không thể đo ECG ngay, đề xuất tiêm canxi cho tất cả bệnh nhân có K⁺ &gt; 6,5 mmol/L.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Gợi ý đồng thuận</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;"><strong>Dịch chuyển nội bào:</strong> Insulin tác dụng nhanh TM (5–10 đơn vị) kết hợp Glucose (25–50 g). Thuốc đồng vận beta dùng bổ trợ. Natri bicarbonate chỉ dùng khi có toan chuyển hóa.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Gợi ý đồng thuận</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;"><strong>Đào thải kali:</strong> Lợi tiểu quai (trừ khi vô niệu/giảm thể tích); chất gắn kết K⁺ (SPS 15–60 g hoặc SZC 10 g x 3 lần/ngày); xem xét chạy thận nhân tạo nếu kháng trị.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Gợi ý đồng thuận</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Đánh giá lại nồng độ K⁺ sau 60 phút và lặp lại ở mốc 2–3 giờ để kiểm tra hiện tượng tăng kali máu dội ngược.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Gợi ý đồng thuận</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; padding: 6px 12px;">
+                        3. Hướng dẫn Hiệp hội Tim mạch Hoa Kỳ (AHA) 2025 về Hồi sức tim phổi (Ngừng tim)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Hiệu quả của việc tiêm canxi tĩnh mạch trong các ca ngừng tim do nghi ngờ tăng kali máu vẫn chưa được xác lập rõ ràng.</td>
+                    <td class="class-IIb" style="padding: 8px 10px;">Class IIb, Level C-LD</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Hiệu quả của natri bicarbonate và insulin-glucose TM trong ngừng tim do nghi ngờ tăng kali máu chưa được xác lập rõ ràng.</td>
+                    <td class="class-IIb" style="padding: 8px 10px;">Class IIb, Level C-EO</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Không khuyến cáo sử dụng thuốc đồng vận beta dạng hít cho bệnh nhân ngừng tim do nghi ngờ tăng kali máu.</td>
+                    <td class="class-III" style="padding: 8px 10px;">Class III (No Benefit), Level C-EO</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; padding: 6px 12px;">
+                        4. Học viện Bác sĩ Gia đình Hoa Kỳ (AAFP)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Quyết định điều trị cấp cứu không nên chỉ dựa trên ECG do thiếu đi ngưỡng nhất quán về các biến đổi sóng tim.</td>
+                    <td class="level-C" style="padding: 8px 10px;">Mức độ C</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Cân nhắc bắt đầu lại liệu pháp ức chế RAAS cùng với thuốc gắn kết kali ở bệnh nhân CKD, suy tim, đái tháo đường.</td>
+                    <td class="level-C" style="padding: 8px 10px;">Mức độ C</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; padding: 6px 12px;">
+                        5. Hướng dẫn Hiệp hội Thận học Vương quốc Anh (UKKA) 2023 về Tăng kali máu cấp tính
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Tất cả bệnh nhân nhập viện có K⁺ \(\ge 6,0\) mmol/L phải được đo ECG 12 chuyển đạo khẩn cấp.</td>
+                    <td class="class-I" style="padding: 8px 10px;">Grade 1C</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Đo khí máu tại chỗ để biết nhanh mức K⁺ trong khi chờ kết quả phòng xét nghiệm trung tâm.</td>
+                    <td class="class-I" style="padding: 8px 10px;">Grade 1B</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;"><strong>Quy trình 5 bước:</strong> (1) Canxi TM nếu có biến đổi ECG (1C); (2) Insulin-glucose TM và Salbutamol khí dung (1B); (3) SZC đường uống (1B); (4) Đánh giá lại K⁺ tại các mốc 1, 2, 4, 6, 24 giờ (2C); (5) Dự phòng tái phát.</td>
+                    <td class="class-I" style="padding: 8px 10px;">Grade 1B (Toàn quy trình)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Bệnh nhân chạy thận nhân tạo bị tăng kali máu nặng (K⁺ \(\ge 6,5\) mmol/L) cần được lọc máu khẩn cấp.</td>
+                    <td class="class-I" style="padding: 8px 10px;">Grade 1A</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="table-section-header" style="background-color: #d9e1e8; font-weight: bold; padding: 6px 12px;">
+                        6. Hội đồng Hồi sức Châu Âu (ERC) 2025
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Dịch chuyển K⁺: Tiêm TM 10 đơn vị insulin hòa tan + 25 g glucose; truyền duy trì glucose 10% nếu đường huyết ban đầu &lt; 7 mmol/L.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Đồng thuận chuyên gia</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Ổn định màng: Dùng 30 mL canxi gluconate 10% TM nếu có biến đổi ECG; dùng 10 mL canxi chloride 10% + 50 mmol natri bicarbonate khi ngừng tim.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Đồng thuận chuyên gia</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 10px;">Không sử dụng canxi ở đối tượng trẻ em bị ngừng tim.</td>
+                    <td style="text-align: center; padding: 8px 10px;">Đồng thuận chuyên gia</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" style="font-size: 13px; color: #4a4a4a; text-align: justify; padding: 10px 15px; background-color: #f9f9f9; border-left: 4px solid #c0c0c0; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; line-height: 1.5;">
+                        <strong>Ghi chú:</strong> Điểm thực hành / Gợi ý đồng thuận: Nhận định dựa trên thực hành lâm sàng và tổng quan y văn hiện hành; 1 = Khuyến cáo mạnh; 2 = Khuyến cáo yếu; A = Bằng chứng chất lượng cao; B = Trung bình; C = Thấp; C-EO = Ý kiến chuyên gia; C-LD = Dữ liệu hạn chế.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <h2>16. Kết luận</h2>
+    <p>Tăng kali máu hiện vẫn là một bệnh lý rối loạn điện giải phổ biến và tiềm ẩn nguy cơ đe dọa trực tiếp đến tính mạng, kéo theo những hệ lụy sâu sắc đối với sự an toàn của bệnh nhân trên mọi mặt trận chăm sóc từ cấp tính cho đến mạn tính. Sức nặng của căn bệnh này đè lên vai mạnh nhất ở những bệnh nhân đang đối mặt với bệnh thận mạn (CKD), suy tim, đái tháo đường, và nhóm bệnh nhân đang tiếp nhận các liệu pháp dược lý làm cản trở quá trình bài tiết kali qua thận, điển hình nhất là thuốc ức chế RAAS.</p>
+    
+    <p>Mặc dù các cơ chế nền tảng chi phối đã được xác lập một cách vững chắc, nhưng thực tế lâm sàng vẫn chứng kiến sự biến thiên đáng kể trong cách thức các bác sĩ chẩn đoán, phân tầng rủi ro, và xử trí tình trạng tăng kali máu. Sự trỗi dậy của các bằng chứng y khoa mới, bao gồm một bức tranh thấu đáo hơn về sinh lý học của kali cũng như sự trình làng của các tác nhân gắn kết kali thế hệ mới, đã và đang không ngừng mở rộng kho vũ khí điều trị. Bài tổng quan này khắc họa tầm quan trọng tối thượng của việc thiết kế các chiến lược can thiệp mang đậm tính cá nhân hóa, phù hợp với từng ngữ cảnh cụ thể—một sự cân bằng tinh tế giữa nhiệm vụ ổn định huyết động chớp nhoáng và việc kiểm soát rủi ro đường dài, đặc biệt là ở nhóm quần thể mang nguy cơ cao.</p>
+
+    <div class="info-box" style="border-left-color: #6366f1;">
+        <strong style="color: #4338ca; font-size: 1.05em; display: block; margin-bottom: 8px;">CÂU HỎI DÀNH CHO CÁC NGHIÊN CỨU TRONG TƯƠNG LAI</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>Đâu là chiến lược định liều insulin an toàn và hiệu quả nhất cho tình trạng tăng kali máu cấp tính, một chiến lược có khả năng cân bằng hoàn hảo giữa mục tiêu kéo giảm nồng độ kali và việc thu hẹp tối đa rủi ro hạ đường huyết trên nhiều quần thể bệnh nhân đa dạng, bao gồm cả nhóm mắc bệnh thận mạn tính hoặc bệnh thận giai đoạn cuối?</li>
+            <li>Hiệu quả so sánh giữa canxi gluconate và canxi chloride ở những bệnh nhân tăng kali máu có kèm theo các bất thường trên điện tâm đồ ra sao, nếu xét trên các lăng kính: thời điểm khởi phát sự ổn định cơ tim, thời lượng kéo dài tác dụng, và các kết cục về mặt an toàn?</li>
+            <li>Những yếu tố đặc thù nào của bệnh nhân và của thuốc đóng vai trò tiên đoán sự đáp ứng (hoặc không đáp ứng) đối với các liệu pháp dịch chuyển kali cấp tính (ví dụ: insulin-dextrose, thuốc đồng vận beta), và làm thế nào để những yếu tố dự báo này có thể kiến tạo nên các thuật toán điều trị được cá nhân hóa?</li>
+            <li>Các chất gắn kết kali thế hệ mới như natri zirconium cyclosilicate và patiromer nên đóng vai trò gì trong bức tranh xử trí cấp cứu chứng tăng kali máu, và liệu sự can thiệp của chúng có thể làm giảm bớt nhu cầu phải chạy thận nhân tạo hay nhập viện một cách thực chất hay không?</li>
+            <li>Đâu là những kết cục lâu dài về mặt lâm sàng và tim mạch của việc bảo lưu liệu pháp ức chế RAAS khi kết hợp cùng các chiến lược hạ kali bổ trợ, so với việc quyết định ngừng hẳn thuốc ức chế RAAS ở những bệnh nhân thường xuyên bị tái phát hoặc mắc tăng kali máu mạn tính?</li>
+        </ul>
+    </div>
+
+</article>
+</body>
+</html>
