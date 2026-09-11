@@ -1,490 +1,58 @@
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<title>Hướng dẫn ESC 2024 về Quản lý tiền tăng huyết áp và Tăng huyết áp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>... — Medical Library</title>
+
+<!-- Dùng chung — không sửa 2 dòng này -->
+<link rel="stylesheet" href="../assets/css/document-template.css">
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-  
-  /* CÀI ĐẶT CHUNG */
-  *, *::before, *::after { box-sizing: border-box; }
-  body { 
-      font-family: "Noto Sans", Roboto, Arial, sans-serif; 
-      font-size: 18px; 
-      line-height: 1.6; 
-      color: #222; 
-      max-width: 900px; 
-      margin: 0 auto; 
-      padding: 20px; 
-      overflow-wrap: break-word; 
-      text-align: justify; 
-  }
-  
-  /* HÌNH ẢNH & VIDEO */
-  img, svg, video { max-width: 100%; height: auto; object-fit: contain; display: block; margin: 1.5rem auto; }
-  .figure-placeholder { border: 2px dashed #999; background-color: #f0f0f0; padding: 30px; text-align: center; font-weight: bold; color: #555; margin: 20px 0; border-radius: 5px; }
-  .image-caption { font-size: 0.85em; color: #4a4a4a; text-align: justify; line-height: 1.5; margin-top: 8px; }
-  
-  /* BẢNG BIỂU (TABLES) */
-  .table-wrapper { width: 100%; overflow-x: auto; margin-bottom: 1.5rem; -webkit-overflow-scrolling: touch; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td { border: 1px solid #ddd; padding: 10px; text-align: justify; vertical-align: top; }
-  th { background-color: #f8f9fa; font-weight: bold; }
-  .table-section-header { background-color: #d9e1e8 !important; font-weight: bold; }
-  .rec-table th { background-color: #004b87; color: white; text-align: center; }
-  
-  /* BỐ CỤC (LAYOUTS) & TIỆN ÍCH */
-  .ws-nowrap { white-space: nowrap; }
-  .grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; align-items: start; }
-  .grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
-  @media (max-width: 768px) { .grid-3col { grid-template-columns: 1fr; } }
-  .flex-columns { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
-  .flex-column-item { flex: 1; min-width: 300px; } 
-  
-  /* TYPOGRAPHY (TIÊU ĐỀ & VĂN BẢN) */
-  h1 { font-size: 2.2em; border-bottom: none; padding-bottom: 10px; text-align: center; color: #b30000; margin-top: 2rem;}
-  h2 { font-size: 1.8em; color: #b30000; margin-top: 2em; }
-  h3 { font-size: 1.4em; color: #004b87; margin-top: 1.8em; }  
-  h4 { font-size: 1.2em; color: #0056b3; margin-top: 1.5em; margin-bottom: 0.5em; }
-  h5 { font-size: 1.1em; color: #333; margin-top: 1.2em; font-style: italic; }
-  
-  article > p { text-indent: 2rem; }
-  .info-box p, .step-card p, table p, .figure-container p { text-indent: 0; }
-  .highlight-text { font-weight: bold; color: #b30000; }
-  
-  /* COMPONENT KHUYẾN CÁO Y KHOA */
-  .class-I { background-color: #4CAF50 !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
-  .class-IIa { background-color: #FFC107 !important; color: black; text-align: center; vertical-align: middle; font-weight: bold; }
-  .class-IIb { background-color: #FF9800 !important; color: black; text-align: center; vertical-align: middle; font-weight: bold; }
-  .class-III { background-color: #F44336 !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
-  .level-A { background-color: #00798c !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
-  .level-B { background-color: #459a96 !important; color: white; text-align: center; vertical-align: middle; font-weight: bold; }
-  .level-C { background-color: #83b6b2 !important; color: black; text-align: center; vertical-align: middle; font-weight: bold; }
-  
-  /* BOX THÔNG TIN & THẺ BƯỚC (CARDS) */
-  .step-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px; background: #fdfdfd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-  .step-card strong { color: #0056b3; font-size: 1.1em; display: block; margin-bottom: 5px; }
-  .step-number { display: inline-block; width: 30px; height: 30px; background: #b30000; color: white; border-radius: 50%; text-align: center; line-height: 30px; font-weight: bold; margin-right: 10px; }
-  .info-box { background: #f9f9f9; padding: 15px; border-left: 4px solid #004b87; border-radius: 0 4px 4px 0; margin-bottom: 1.5rem; }
-  
-  /* --- KHU VỰC BẢNG CHỮ VIẾT TẮT (ĐÃ TÍCH HỢP) --- */
-  .abbreviations { font-size: 0.85em; color: #4a4a4a; text-align: justify; padding: 15px; padding-left: 20px; background-color: #f9f9f9; border-left: 4px solid #c0c0c0; margin-bottom: 2rem; line-height: 1.6; }
-  
-  .abbr-container { 
-      background-color: #fefefe; 
-      border: 1px solid #e0e0e0; 
-      border-top: 4px solid #008000; /* Giữ line xanh lá nổi bật của bạn */
-      border-radius: 8px; 
-      padding: 20px 25px; 
-      margin-bottom: 2rem; 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.03); 
-      font-size: 13px; /* Cỡ chữ nhỏ để tiết kiệm không gian */
-  }
-  .compact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tự chia cột mượt mà */
-      gap: 10px 20px;
-      margin: 0;
-  }
-  .abbr-row { 
-      display: flex; 
-      align-items: flex-start;
-      padding-bottom: 6px; 
-      border-bottom: 1px dashed #e0e0e0; 
-  }
-  .abbr-row dt { 
-      flex: 0 0 95px; /* Giữ chữ viết tắt thẳng hàng */
-      font-weight: 800; 
-      color: #008000; /* Cùng tông với viền bảng */
-      margin: 0; 
-  }
-  .abbr-row dd { 
-      flex: 1; 
-      margin: 0; 
-      color: #222; 
-      font-weight: bold; /* Tiếng Anh in đậm */
-      line-height: 1.4; 
-  }
-  .vi-trans { 
-      display: block; /* Xuống dòng tiếng Việt */
-      font-style: italic; /* In nghiêng */
-      color: black; /* Màu đen theo yêu cầu */
-      font-weight: normal; /* Không in đậm phần tiếng Việt */
-      font-size: 0.95em;
-      margin-top: 3px; 
-  }
-</style>
+
+<!-- Cấu hình riêng của tài liệu này — điền "..." bằng thông tin thật -->
+<script type="application/json" id="doc-config">
+{
+  "printBrandText": "Khuyến cáo ESC 2024 về quản lý Tăng huyết áp",
+  "authorLabel": "Biên dịch",
+  "authorName": "BS. Trần Thanh Hoàng Linh",
+  "facebookUrl": "https://www.facebook.com/profile.php?id=61578946288639",
+  "facebookLabel": "Hoàng Linh",
+  "email": "dr.tthlinh@gmail.com",
+  "readingLink": "https://huberton176.github.io/medical-library/reader.html?id=esc-2024-hypertension",
+  "printWatermarkUrl": "https://file.garden/aRcee0oeuCLsBw6X/logo"
+}
+</script>
 </head>
 
 <body>
+<div class="reader-layout">
 
+  <aside class="toc-panel" aria-label="Mục lục tài liệu">
+    <div class="toc-head"><span>NỘI DUNG</span><span id="progressText">0%</span></div>
+    <nav aria-label="Mục lục"><ul id="tocList"></ul></nav>
+  </aside>
+
+  <main class="reader-main">
+    <div class="mobile-sticky-shell">
+      <section class="reader-hero" id="readerHero">
+        <p class="kicker">...</p>
+        <h1>...</h1>
+        <p>Biên dịch: <strong>...</strong></p>
+
+        <!-- Được document-template.js tự điền từ #doc-config, không sửa tay -->
+        <div class="hero-contact" id="heroContact" aria-label="Thông tin liên hệ"></div>
+        <div class="hero-reading-link" id="heroReadingLink"></div>
+      </section>
+
+      <div class="mobile-toc">
+        <label for="mobileToc">Mục lục</label>
+        <select id="mobileToc"><option value="">Chọn mục…</option></select>
+      </div>
+    </div>
+
+    <section class="document-surface">
     <article>
 
-<h3>Danh mục thuật ngữ viết tắt </h3>
-<div class="abbr-container">
-    <dl class="compact-grid">
-        <div class="abbr-row">
-            <dt>ABI</dt>
-            <dd>Ankle–brachial index<span class="vi-trans">(Chỉ số huyết áp tâm thu cổ chân - cánh tay)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ABPM</dt>
-            <dd>Ambulatory blood pressure monitoring<span class="vi-trans">(Theo dõi huyết áp động)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ACCORD</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Hành động Kiểm soát Nguy cơ Tim mạch ở Bệnh nhân Đái tháo đường)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ACE</dt>
-            <dd>Angiotensin-converting enzyme<span class="vi-trans">(Men chuyển angiotensin)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ACR</dt>
-            <dd>Albumin:creatinine ratio<span class="vi-trans">(Tỷ số albumin/creatinine)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>AF</dt>
-            <dd>Atrial fibrillation<span class="vi-trans">(Rung nhĩ)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>AHI</dt>
-            <dd>Apnoea–hypopnoea index<span class="vi-trans">(Chỉ số ngưng thở - giảm thở)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ALARA</dt>
-            <dd>As low as reasonably achievable<span class="vi-trans">(Thấp nhất có thể đạt được một cách hợp lý)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ALLHAT</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Điều trị Hạ huyết áp và Hạ lipid máu để Ngăn ngừa Nhồi máu cơ tim)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>AOBP</dt>
-            <dd>Automated office blood pressure<span class="vi-trans">(Đo huyết áp tự động tại phòng khám)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ARB</dt>
-            <dd>Angiotensin receptor blocker<span class="vi-trans">(Thuốc chẹn thụ thể angiotensin)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ARNi</dt>
-            <dd><span class="vi-trans">(Thuốc ức chế thụ thể angiotensin-neprilysin)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ARR</dt>
-            <dd>Aldosterone-to-renin ratio<span class="vi-trans">(Tỷ số aldosterone/renin)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ASCVD</dt>
-            <dd>Atherosclerotic cardiovascular disease<span class="vi-trans">(Bệnh tim mạch do xơ vữa)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>BMI</dt>
-            <dd>Body mass index<span class="vi-trans">(Chỉ số khối cơ thể)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>BP</dt>
-            <dd>Blood pressure<span class="vi-trans">(Huyết áp)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>BSA</dt>
-            <dd>Body surface area<span class="vi-trans">(Diện tích bề mặt cơ thể)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CAC</dt>
-            <dd>Coronary artery calcium<span class="vi-trans">(Điểm vôi hóa động mạch vành)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CAD</dt>
-            <dd>Coronary artery disease<span class="vi-trans">(Bệnh động mạch vành)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CCB</dt>
-            <dd>Calcium channel blocker<span class="vi-trans">(Thuốc chẹn kênh canxi)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CHAP</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Tăng huyết áp Mạn tính và Thai kỳ)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CI</dt>
-            <dd>Confidence interval<span class="vi-trans">(Khoảng tin cậy)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CKD</dt>
-            <dd>Chronic kidney disease<span class="vi-trans">(Bệnh thận mạn)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CKD-EPI</dt>
-            <dd><span class="vi-trans">(Hợp tác Dịch tễ học Bệnh thận mạn)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>COVID-19</dt>
-            <dd><span class="vi-trans">(Bệnh do vi-rút corona 2019)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CPAP</dt>
-            <dd>Continuous positive airway pressure<span class="vi-trans">(Thở máy áp lực dương liên tục)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CPG</dt>
-            <dd>Clinical Practice Guidelines<span class="vi-trans">(Hướng dẫn Thực hành Lâm sàng)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CT</dt>
-            <dd>Computed tomography<span class="vi-trans">(Chụp cắt lớp vi tính)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>CVD</dt>
-            <dd>Cardiovascular disease<span class="vi-trans">(Bệnh tim mạch)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>DASH</dt>
-            <dd>Dietary Approaches to Stop Hypertension<span class="vi-trans">(Chế độ ăn kiêng ngăn ngừa tăng huyết áp)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>DBP</dt>
-            <dd>Diastolic blood pressure<span class="vi-trans">(Huyết áp tâm trương)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>DECIDE-Salt</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Chế độ ăn uống, Tập thể dục, Sức khỏe Tim mạch và Muối)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>EACTS</dt>
-            <dd><span class="vi-trans">(Hiệp hội Phẫu thuật Tim - Lồng ngực Châu Âu)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ECG</dt>
-            <dd>Electrocardiogram<span class="vi-trans">(Điện tâm đồ)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>eGFR</dt>
-            <dd>Estimated glomerular filtration rate<span class="vi-trans">(Mức lọc cầu thận ước tính)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>EPIC</dt>
-            <dd><span class="vi-trans">(Nghiên cứu Tiến cứu Châu Âu về Ung thư và Dinh dưỡng)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ESC</dt>
-            <dd>European Society of Cardiology<span class="vi-trans">(Hội Tim mạch Châu Âu)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ESH</dt>
-            <dd>European Society of Hypertension<span class="vi-trans">(Hội Tăng huyết áp Châu Âu)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>ESPRIT</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Hiệu quả của việc Hạ huyết áp tâm thu tích cực trong việc giảm Nguy cơ biến cố mạch máu)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>FMD-RVH</dt>
-            <dd><span class="vi-trans">(Tăng huyết áp mạch máu thận do loạn sản sợi cơ)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>GFR</dt>
-            <dd>Glomerular filtration rate<span class="vi-trans">(Mức lọc cầu thận)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>GLP-1</dt>
-            <dd>Glucagon-like peptide-1<span class="vi-trans">(Peptide giống glucagon-1)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>GP</dt>
-            <dd>General practitioner<span class="vi-trans">(Bác sĩ đa khoa)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>HbA1c</dt>
-            <dd>Glycated haemoglobin<span class="vi-trans">(Haemoglobin glycate hóa)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>HBPM</dt>
-            <dd>Home blood pressure monitoring<span class="vi-trans">(Theo dõi huyết áp tại nhà)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>HDL</dt>
-            <dd>High-density lipoprotein<span class="vi-trans">(Lipoprotein tỷ trọng cao)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>HFpEF</dt>
-            <dd>Heart failure with preserved ejection fraction<span class="vi-trans">(Suy tim phân suất tống máu bảo tồn)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>HF(m)rEF</dt>
-            <dd>Heart failure with (mildly) reduced ejection fraction<span class="vi-trans">(Suy tim phân suất tống máu giảm (nhẹ))</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>HIV</dt>
-            <dd><span class="vi-trans">(Vi-rút gây suy giảm miễn dịch ở người)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>HMOD</dt>
-            <dd>Hypertension-mediated organ damage<span class="vi-trans">(Tổn thương cơ quan đích do tăng huyết áp)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>i.m.</dt>
-            <dd>Intramuscular<span class="vi-trans">(Tiêm bắp)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>i.v.</dt>
-            <dd>Intravenous<span class="vi-trans">(Tiêm tĩnh mạch)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>KDIGO</dt>
-            <dd>Kidney Disease: Improving Global Outcomes<span class="vi-trans">(Tổ chức Cải thiện Kết quả Toàn cầu về Bệnh thận)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>LA</dt>
-            <dd>Left atrial<span class="vi-trans">(Nhĩ trái)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>LDL</dt>
-            <dd>Low-density lipoprotein<span class="vi-trans">(Lipoprotein tỷ trọng thấp)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>LV</dt>
-            <dd>Left ventricular<span class="vi-trans">(Thất trái)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>LVH</dt>
-            <dd>Left ventricular hypertrophy<span class="vi-trans">(Phì đại thất trái)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>MRA</dt>
-            <dd>Mineralocorticoid receptor antagonist<span class="vi-trans">(Thuốc đối kháng thụ thể khoáng corticoid)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>MRI</dt>
-            <dd>Magnetic resonance imaging<span class="vi-trans">(Chụp cộng hưởng từ)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>NNT</dt>
-            <dd>Number needed to treat<span class="vi-trans">(Số người cần điều trị)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>NT-proBNP</dt>
-            <dd><span class="vi-trans">(N-terminal pro-brain natriuretic peptide)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>OSAS</dt>
-            <dd>Obstructive sleep apnoea syndrome<span class="vi-trans">(Hội chứng ngưng thở khi ngủ do tắc nghẽn)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>PPGL</dt>
-            <dd>Phaeochromocytoma/paraganglioma<span class="vi-trans">(U tủy thượng thận/u phó hạch)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>PREOP-ACEI</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Đánh giá Ngẫu nhiên Tiến cứu về Thuốc ức chế Men chuyển trước Phẫu thuật)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>PREMs</dt>
-            <dd>Patient-Reported Experience Measures<span class="vi-trans">(Thước đo Trải nghiệm do Người bệnh Báo cáo)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>PROMS</dt>
-            <dd>Patient-Reported Outcome Measures<span class="vi-trans">(Thước đo Kết quả do Người bệnh Báo cáo)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>PTRA</dt>
-            <dd>Percutaneous transluminal renal angioplasty<span class="vi-trans">(Tạo hình mạch máu thận qua da)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>PWV</dt>
-            <dd>Pulse wave velocity<span class="vi-trans">(Vận tốc sóng mạch)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>RAAS</dt>
-            <dd><span class="vi-trans">(Hệ renin-angiotensin-aldosterone)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>RADIANCE-HTN</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Hệ thống Recor Medical Paradise trên Bệnh nhân Tăng huyết áp Lâm sàng)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>RAS</dt>
-            <dd><span class="vi-trans">(Hệ renin-angiotensin)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>RCT</dt>
-            <dd>Randomized controlled trial<span class="vi-trans">(Thử nghiệm đối chứng ngẫu nhiên)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>RVH</dt>
-            <dd>Renovascular hypertension<span class="vi-trans">(Tăng huyết áp mạch máu thận)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>RWT</dt>
-            <dd>Relative wall thickness<span class="vi-trans">(Bề dày thành tương đối)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SBP</dt>
-            <dd>Systolic blood pressure<span class="vi-trans">(Huyết áp tâm thu)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SCORE2</dt>
-            <dd><span class="vi-trans">(Hệ thống Đánh giá Nguy cơ Mạch vành 2)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SCORE2-OP</dt>
-            <dd><span class="vi-trans">(Hệ thống Đánh giá Nguy cơ Mạch vành 2 ở Người cao tuổi)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SGLT2</dt>
-            <dd>Sodium–glucose co-transporter 2<span class="vi-trans">(Chất đồng vận chuyển natri-glucose 2)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SNP</dt>
-            <dd>Single-nucleotide polymorphism<span class="vi-trans">(Đa hình nucleotide đơn)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SNS</dt>
-            <dd>Sympathetic nervous system<span class="vi-trans">(Hệ thần kinh giao cảm)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SPC</dt>
-            <dd>Single-pill combination<span class="vi-trans">(Viên kết hợp liều cố định)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SPRINT</dt>
-            <dd><span class="vi-trans">(Thử nghiệm Can thiệp Huyết áp Tâm thu)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>SSaSS</dt>
-            <dd><span class="vi-trans">(Nghiên cứu Muối thay thế và Đột quỵ)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>STEP</dt>
-            <dd><span class="vi-trans">(Chiến lược Can thiệp Huyết áp ở Bệnh nhân Tăng huyết áp Cao tuổi)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>STEP-1</dt>
-            <dd><span class="vi-trans">(Hiệu quả Điều trị của Semaglutide ở Người Béo phì)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>TIA</dt>
-            <dd>Transient ischaemic attack<span class="vi-trans">(Cơn thiếu máu não cục bộ thoáng qua)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>TRIUMPH</dt>
-            <dd><span class="vi-trans">(Điều trị Tăng huyết áp Kháng trị bằng cách Thay đổi Lối sống để Nâng cao Sức khỏe)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>TSH</dt>
-            <dd>Thyroid-stimulating hormone<span class="vi-trans">(Hormone kích thích tuyến giáp)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>WHO</dt>
-            <dd>World Health Organization<span class="vi-trans">(Tổ chức Y tế Thế giới)</span></dd>
-        </div>
-        <div class="abbr-row">
-            <dt>WML</dt>
-            <dd>White matter lesion<span class="vi-trans">(Tổn thương chất trắng)</span></dd>
-        </div>
-    </dl>
-</div>
 <h2>1. Lời nói đầu</h2>
 <p>Các tài liệu hướng dẫn có nhiệm vụ đánh giá và đúc kết những bằng chứng hiện hành, với mục tiêu hỗ trợ các chuyên gia y tế lựa chọn phương pháp chẩn đoán hoặc phác đồ điều trị tối ưu cho từng bệnh nhân mắc một bệnh lý cụ thể. Hướng dẫn được biên soạn nhằm phục vụ công tác của các nhân viên y tế và được Hội Tim mạch Châu Âu (ESC) phát hành hoàn toàn miễn phí.</p>
 <p>Tuy nhiên, các Hướng dẫn của ESC không thể thay thế trách nhiệm chuyên môn của từng y bác sĩ. Các chuyên gia y tế vẫn phải tự mình đưa ra những quyết định lâm sàng chính xác và phù hợp nhất, dựa trên tình trạng sức khỏe thực tế của mỗi bệnh nhân, đồng thời cần tham vấn ý kiến của người bệnh hoặc người chăm sóc trong những trường hợp cần thiết. Bác sĩ cũng có trách nhiệm tuân thủ nghiêm ngặt các quy định và luật pháp sở tại liên quan đến việc kê đơn thuốc và sử dụng thiết bị y tế tại thời điểm chỉ định, cũng như giữ gìn y đức nghề nghiệp.</p>
@@ -5175,7 +4743,379 @@
     </table>
 </div>
 
+<h3>Danh mục thuật ngữ viết tắt </h3>
+<div class="abbr-container">
+    <dl class="compact-grid">
+        <div class="abbr-row">
+            <dt>ABI</dt>
+            <dd>Ankle–brachial index<span class="vi-trans">(Chỉ số huyết áp tâm thu cổ chân - cánh tay)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ABPM</dt>
+            <dd>Ambulatory blood pressure monitoring<span class="vi-trans">(Theo dõi huyết áp động)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ACCORD</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Hành động Kiểm soát Nguy cơ Tim mạch ở Bệnh nhân Đái tháo đường)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ACE</dt>
+            <dd>Angiotensin-converting enzyme<span class="vi-trans">(Men chuyển angiotensin)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ACR</dt>
+            <dd>Albumin:creatinine ratio<span class="vi-trans">(Tỷ số albumin/creatinine)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>AF</dt>
+            <dd>Atrial fibrillation<span class="vi-trans">(Rung nhĩ)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>AHI</dt>
+            <dd>Apnoea–hypopnoea index<span class="vi-trans">(Chỉ số ngưng thở - giảm thở)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ALARA</dt>
+            <dd>As low as reasonably achievable<span class="vi-trans">(Thấp nhất có thể đạt được một cách hợp lý)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ALLHAT</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Điều trị Hạ huyết áp và Hạ lipid máu để Ngăn ngừa Nhồi máu cơ tim)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>AOBP</dt>
+            <dd>Automated office blood pressure<span class="vi-trans">(Đo huyết áp tự động tại phòng khám)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ARB</dt>
+            <dd>Angiotensin receptor blocker<span class="vi-trans">(Thuốc chẹn thụ thể angiotensin)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ARNi</dt>
+            <dd><span class="vi-trans">(Thuốc ức chế thụ thể angiotensin-neprilysin)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ARR</dt>
+            <dd>Aldosterone-to-renin ratio<span class="vi-trans">(Tỷ số aldosterone/renin)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ASCVD</dt>
+            <dd>Atherosclerotic cardiovascular disease<span class="vi-trans">(Bệnh tim mạch do xơ vữa)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>BMI</dt>
+            <dd>Body mass index<span class="vi-trans">(Chỉ số khối cơ thể)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>BP</dt>
+            <dd>Blood pressure<span class="vi-trans">(Huyết áp)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>BSA</dt>
+            <dd>Body surface area<span class="vi-trans">(Diện tích bề mặt cơ thể)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CAC</dt>
+            <dd>Coronary artery calcium<span class="vi-trans">(Điểm vôi hóa động mạch vành)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CAD</dt>
+            <dd>Coronary artery disease<span class="vi-trans">(Bệnh động mạch vành)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CCB</dt>
+            <dd>Calcium channel blocker<span class="vi-trans">(Thuốc chẹn kênh canxi)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CHAP</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Tăng huyết áp Mạn tính và Thai kỳ)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CI</dt>
+            <dd>Confidence interval<span class="vi-trans">(Khoảng tin cậy)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CKD</dt>
+            <dd>Chronic kidney disease<span class="vi-trans">(Bệnh thận mạn)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CKD-EPI</dt>
+            <dd><span class="vi-trans">(Hợp tác Dịch tễ học Bệnh thận mạn)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>COVID-19</dt>
+            <dd><span class="vi-trans">(Bệnh do vi-rút corona 2019)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CPAP</dt>
+            <dd>Continuous positive airway pressure<span class="vi-trans">(Thở máy áp lực dương liên tục)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CPG</dt>
+            <dd>Clinical Practice Guidelines<span class="vi-trans">(Hướng dẫn Thực hành Lâm sàng)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CT</dt>
+            <dd>Computed tomography<span class="vi-trans">(Chụp cắt lớp vi tính)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>CVD</dt>
+            <dd>Cardiovascular disease<span class="vi-trans">(Bệnh tim mạch)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>DASH</dt>
+            <dd>Dietary Approaches to Stop Hypertension<span class="vi-trans">(Chế độ ăn kiêng ngăn ngừa tăng huyết áp)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>DBP</dt>
+            <dd>Diastolic blood pressure<span class="vi-trans">(Huyết áp tâm trương)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>DECIDE-Salt</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Chế độ ăn uống, Tập thể dục, Sức khỏe Tim mạch và Muối)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>EACTS</dt>
+            <dd><span class="vi-trans">(Hiệp hội Phẫu thuật Tim - Lồng ngực Châu Âu)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ECG</dt>
+            <dd>Electrocardiogram<span class="vi-trans">(Điện tâm đồ)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>eGFR</dt>
+            <dd>Estimated glomerular filtration rate<span class="vi-trans">(Mức lọc cầu thận ước tính)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>EPIC</dt>
+            <dd><span class="vi-trans">(Nghiên cứu Tiến cứu Châu Âu về Ung thư và Dinh dưỡng)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ESC</dt>
+            <dd>European Society of Cardiology<span class="vi-trans">(Hội Tim mạch Châu Âu)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ESH</dt>
+            <dd>European Society of Hypertension<span class="vi-trans">(Hội Tăng huyết áp Châu Âu)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>ESPRIT</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Hiệu quả của việc Hạ huyết áp tâm thu tích cực trong việc giảm Nguy cơ biến cố mạch máu)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>FMD-RVH</dt>
+            <dd><span class="vi-trans">(Tăng huyết áp mạch máu thận do loạn sản sợi cơ)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>GFR</dt>
+            <dd>Glomerular filtration rate<span class="vi-trans">(Mức lọc cầu thận)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>GLP-1</dt>
+            <dd>Glucagon-like peptide-1<span class="vi-trans">(Peptide giống glucagon-1)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>GP</dt>
+            <dd>General practitioner<span class="vi-trans">(Bác sĩ đa khoa)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>HbA1c</dt>
+            <dd>Glycated haemoglobin<span class="vi-trans">(Haemoglobin glycate hóa)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>HBPM</dt>
+            <dd>Home blood pressure monitoring<span class="vi-trans">(Theo dõi huyết áp tại nhà)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>HDL</dt>
+            <dd>High-density lipoprotein<span class="vi-trans">(Lipoprotein tỷ trọng cao)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>HFpEF</dt>
+            <dd>Heart failure with preserved ejection fraction<span class="vi-trans">(Suy tim phân suất tống máu bảo tồn)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>HF(m)rEF</dt>
+            <dd>Heart failure with (mildly) reduced ejection fraction<span class="vi-trans">(Suy tim phân suất tống máu giảm (nhẹ))</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>HIV</dt>
+            <dd><span class="vi-trans">(Vi-rút gây suy giảm miễn dịch ở người)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>HMOD</dt>
+            <dd>Hypertension-mediated organ damage<span class="vi-trans">(Tổn thương cơ quan đích do tăng huyết áp)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>i.m.</dt>
+            <dd>Intramuscular<span class="vi-trans">(Tiêm bắp)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>i.v.</dt>
+            <dd>Intravenous<span class="vi-trans">(Tiêm tĩnh mạch)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>KDIGO</dt>
+            <dd>Kidney Disease: Improving Global Outcomes<span class="vi-trans">(Tổ chức Cải thiện Kết quả Toàn cầu về Bệnh thận)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>LA</dt>
+            <dd>Left atrial<span class="vi-trans">(Nhĩ trái)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>LDL</dt>
+            <dd>Low-density lipoprotein<span class="vi-trans">(Lipoprotein tỷ trọng thấp)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>LV</dt>
+            <dd>Left ventricular<span class="vi-trans">(Thất trái)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>LVH</dt>
+            <dd>Left ventricular hypertrophy<span class="vi-trans">(Phì đại thất trái)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>MRA</dt>
+            <dd>Mineralocorticoid receptor antagonist<span class="vi-trans">(Thuốc đối kháng thụ thể khoáng corticoid)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>MRI</dt>
+            <dd>Magnetic resonance imaging<span class="vi-trans">(Chụp cộng hưởng từ)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>NNT</dt>
+            <dd>Number needed to treat<span class="vi-trans">(Số người cần điều trị)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>NT-proBNP</dt>
+            <dd><span class="vi-trans">(N-terminal pro-brain natriuretic peptide)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>OSAS</dt>
+            <dd>Obstructive sleep apnoea syndrome<span class="vi-trans">(Hội chứng ngưng thở khi ngủ do tắc nghẽn)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>PPGL</dt>
+            <dd>Phaeochromocytoma/paraganglioma<span class="vi-trans">(U tủy thượng thận/u phó hạch)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>PREOP-ACEI</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Đánh giá Ngẫu nhiên Tiến cứu về Thuốc ức chế Men chuyển trước Phẫu thuật)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>PREMs</dt>
+            <dd>Patient-Reported Experience Measures<span class="vi-trans">(Thước đo Trải nghiệm do Người bệnh Báo cáo)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>PROMS</dt>
+            <dd>Patient-Reported Outcome Measures<span class="vi-trans">(Thước đo Kết quả do Người bệnh Báo cáo)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>PTRA</dt>
+            <dd>Percutaneous transluminal renal angioplasty<span class="vi-trans">(Tạo hình mạch máu thận qua da)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>PWV</dt>
+            <dd>Pulse wave velocity<span class="vi-trans">(Vận tốc sóng mạch)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>RAAS</dt>
+            <dd><span class="vi-trans">(Hệ renin-angiotensin-aldosterone)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>RADIANCE-HTN</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Hệ thống Recor Medical Paradise trên Bệnh nhân Tăng huyết áp Lâm sàng)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>RAS</dt>
+            <dd><span class="vi-trans">(Hệ renin-angiotensin)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>RCT</dt>
+            <dd>Randomized controlled trial<span class="vi-trans">(Thử nghiệm đối chứng ngẫu nhiên)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>RVH</dt>
+            <dd>Renovascular hypertension<span class="vi-trans">(Tăng huyết áp mạch máu thận)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>RWT</dt>
+            <dd>Relative wall thickness<span class="vi-trans">(Bề dày thành tương đối)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SBP</dt>
+            <dd>Systolic blood pressure<span class="vi-trans">(Huyết áp tâm thu)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SCORE2</dt>
+            <dd><span class="vi-trans">(Hệ thống Đánh giá Nguy cơ Mạch vành 2)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SCORE2-OP</dt>
+            <dd><span class="vi-trans">(Hệ thống Đánh giá Nguy cơ Mạch vành 2 ở Người cao tuổi)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SGLT2</dt>
+            <dd>Sodium–glucose co-transporter 2<span class="vi-trans">(Chất đồng vận chuyển natri-glucose 2)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SNP</dt>
+            <dd>Single-nucleotide polymorphism<span class="vi-trans">(Đa hình nucleotide đơn)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SNS</dt>
+            <dd>Sympathetic nervous system<span class="vi-trans">(Hệ thần kinh giao cảm)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SPC</dt>
+            <dd>Single-pill combination<span class="vi-trans">(Viên kết hợp liều cố định)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SPRINT</dt>
+            <dd><span class="vi-trans">(Thử nghiệm Can thiệp Huyết áp Tâm thu)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>SSaSS</dt>
+            <dd><span class="vi-trans">(Nghiên cứu Muối thay thế và Đột quỵ)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>STEP</dt>
+            <dd><span class="vi-trans">(Chiến lược Can thiệp Huyết áp ở Bệnh nhân Tăng huyết áp Cao tuổi)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>STEP-1</dt>
+            <dd><span class="vi-trans">(Hiệu quả Điều trị của Semaglutide ở Người Béo phì)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>TIA</dt>
+            <dd>Transient ischaemic attack<span class="vi-trans">(Cơn thiếu máu não cục bộ thoáng qua)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>TRIUMPH</dt>
+            <dd><span class="vi-trans">(Điều trị Tăng huyết áp Kháng trị bằng cách Thay đổi Lối sống để Nâng cao Sức khỏe)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>TSH</dt>
+            <dd>Thyroid-stimulating hormone<span class="vi-trans">(Hormone kích thích tuyến giáp)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>WHO</dt>
+            <dd>World Health Organization<span class="vi-trans">(Tổ chức Y tế Thế giới)</span></dd>
+        </div>
+        <div class="abbr-row">
+            <dt>WML</dt>
+            <dd>White matter lesion<span class="vi-trans">(Tổn thương chất trắng)</span></dd>
+        </div>
+    </dl>
+</div>
+
 
 </article>
+    </section>
+  </main>
+</div>
+
+<!-- Dùng chung — không sửa dòng này -->
+<script src="../assets/js/document-template.js" defer></script>
 </body>
 </html>
